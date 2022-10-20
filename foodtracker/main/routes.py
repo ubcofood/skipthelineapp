@@ -29,3 +29,11 @@ def loginvendor():
 @main.route('/loginadmin')
 def loginadmin():
     return render_template('login_admin.html')
+
+@main.route('/adminview')
+def adminview():
+    return render_template('adminView.html')
+
+@main.route('/adminanalytics')
+def adminanalytics():
+    return render_template('adminAnalytics.html')

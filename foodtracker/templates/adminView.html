@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skip the line | Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/united.bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/bootstrap.css') }}"/>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="../static/bs/css/buttonstyle.css">
+
+    <![endif]-->
+
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid col-lg-offset-2">
+        <a class="navbar-brand" href="#">Admin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/adminView">Vendors Management
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminanalytics">Analytics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Vendor table -->
+<main>
+    <div>
+        <div class="panel-default">
+            <br>
+            <h4><b>Current Vendors</b></h4>
+            <br>
+        </div>
+        <div class="table">
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th style="width: 5%;">Logo</th>
+                    <th style="width: 17%;">Name</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                             width="100" height="100">
+                    </td>
+                    <td>The well</td>
+                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
+                    <td>
+                        <a class="btn btn-default btn-xs" data-toggle="modal" data-target="#SampleModal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-xs">
+                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='img/sushi_logo.png') }}" alt="..."
+                             width="100" height="100">
+                    </td>
+                    <td>Koi Sushi</td>
+                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
+                    <td>
+                        <a href="#" class="btn btn-default btn-xs">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-xs">
+                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='img/fusion_logo.png') }}" alt="..."
+                             width="100" height="100">
+                    </td>
+                    <td>Fusion Express</td>
+                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
+                    <td>
+                        <a href="#" class="btn btn-default btn-xs">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-xs">
+                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--add floating button-->
+    <a href="#" class="float buttonstyle">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+
+</main>
+
+<!-- Sample modal-->
+<div class="modal fade " id="SampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Blt Sandwich</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!--left column-->
+                        <div class="panel-body text-bold">
+                            <img src="{{ url_for('static', filename='img/well_blt.jpeg') }}" alt="..."
+                                 class="img-thumbnail">
+                        </div>
+                        <br>
+                        <ul class="list-group">
+
+                            <a href="#"
+                               class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1">Ingredients</h4>
+                                    <!--<small>3 days ago</small>-->
+                                </div>
+                                <p class="mb-1">
+                                    Bacon
+                                    ,slices white bread
+                                    ,leaves iceberg lettuce, tablespoons Hellmann's mayonnaise, cheese.</p>
+                                <!--<small>Donec id elit non mi porta.</small>-->
+                            </a>
+                            <br>
+                            <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
+                                <span class="badge badge-animal">Animal Products</span> <span
+                                        class="badge badge-lactose">Lactose</span>Allergens
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <ul class="list-group">
+
+                            <div class="panel-body text-bold">
+                                <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                                     class="img-thumbnail">
+                            </div>
+
+                            <br>
+                            <a href="#"
+                               class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between bg-light">
+                                    <h4 class="mb-1">Price</h4>
+                                    <!--<small>3 days ago</small>-->
+                                </div>
+                                <p class="mb-1">
+
+                                    $11.99</p>
+                                <!--<small>Donec id elit non mi porta.</small>-->
+                            </a>
+                            <br>
+                            <br>
+                            <input type="number" class="form-control" id="input1" placeholder="Enter quantity">
+                        </ul>
+                        <!--right column-->
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal"
+                        class="btn btn-primary">Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="row pad">
+        <div class="col-lg-12 text-center">
+            Copyright &copy; 2022 <strong>UBC SUO: Skip the line</strong>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
