@@ -68,7 +68,7 @@
                     <td>The well</td>
                     <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
                     <td>
-                        <a class="btn btn-default btn-xs" data-toggle="modal" data-target="#SampleModal">
+                        <a class="btn btn-default btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
                             <i class="glyphicon glyphicon-pencil"></i> Edit
                         </a>
                         <a href="#" class="btn btn-danger btn-xs">
@@ -84,7 +84,7 @@
                     <td>Koi Sushi</td>
                     <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
                     <td>
-                        <a href="#" class="btn btn-default btn-xs">
+                        <a href="#" class="btn btn-default btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
                             <i class="glyphicon glyphicon-pencil"></i> Edit
                         </a>
                         <a href="#" class="btn btn-danger btn-xs">
@@ -100,7 +100,7 @@
                     <td>Fusion Express</td>
                     <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
                     <td>
-                        <a href="#" class="btn btn-default btn-xs">
+                        <a href="#" class="btn btn-default btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
                             <i class="glyphicon glyphicon-pencil"></i> Edit
                         </a>
                         <a href="#" class="btn btn-danger btn-xs">
@@ -113,19 +113,19 @@
         </div>
     </div>
     <!--add floating button-->
-    <a href="#" class="float buttonstyle">
+    <a href="#" class="float buttonstyle" data-toggle="modal" data-target="#thewelleditmodal">
         <i class="fa fa-plus my-float"></i>
     </a>
 
 </main>
 
-<!-- Sample modal-->
-<div class="modal fade " id="SampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- The well modal-->
+<div class="modal fade " id="thewelleditmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Blt Sandwich</h3>
+                <h3 class="modal-title center-block" id="exampleModalLabel"></h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -135,64 +135,89 @@
                     <div class="col-md-6 text-center">
                         <!--left column-->
                         <div class="panel-body text-bold">
-                            <img src="{{ url_for('static', filename='img/well_blt.jpeg') }}" alt="..."
-                                 class="img-thumbnail">
+                            <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                                 width="300px" height="300px">
                         </div>
                         <br>
                         <ul class="list-group">
-
-                            <a href="#"
-                               class="list-group-item list-group-item-action flex-column align-items-start active">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h4 class="mb-1">Ingredients</h4>
-                                    <!--<small>3 days ago</small>-->
-                                </div>
-                                <p class="mb-1">
-                                    Bacon
-                                    ,slices white bread
-                                    ,leaves iceberg lettuce, tablespoons Hellmann's mayonnaise, cheese.</p>
-                                <!--<small>Donec id elit non mi porta.</small>-->
-                            </a>
+                            <div class="d-grid gap-2">
+                                <label class="btn btn-primary" type="button" for="uploadbtn">
+                                    <i class="glyphicon glyphicon-cloud-upload"></i> Update Logo
+                                </label>
+                                <input type="file" id="uploadbtn" hidden/></input>
+                            </div>
                             <br>
-                            <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
-                                <span class="badge badge-animal">Animal Products</span> <span
-                                        class="badge badge-lactose">Lactose</span>Allergens
-                            </li>
+                            <div>
+                                <small class="form-text text-muted">Uploaded image will be resized to fit within width of 200
+                                    pixels
+                                    and height of 200
+                                    pixels. Must be in either jpg, jpeg, gif or png format</small>
+                            </div>
                         </ul>
 
                     </div>
-                    <div class="col-md-6 text-center">
-                        <ul class="list-group">
+                    <div class="col-md-6 text-left">
+                        <ul class="list-group-item">
+                            <form>
+                                <fieldset>
+                                    <legend>Edit details</legend>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Name</label>
+                                        <input type="text" class="form-control" placeholder="The Well">
+                                        <small id="emailHelp" class="form-text text-muted">Enter the name of your
+                                            restaurant here</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Address</label>
+                                        <input type="text" class="form-control" placeholder="University Centre, 3272 University Way, Kelowna, BC V1V 1V7"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">UNC Room number</label>
+                                        <input type="text" class="form-control" placeholder="UNC125">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Email</label>
+                                        <input type="text" class="form-control" placeholder="thewell@ubc.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Phone number</label>
+                                        <input type="text" class="form-control" placeholder="123 456 7890">
+                                    </div>
 
-                            <div class="panel-body text-bold">
-                                <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
-                                     class="img-thumbnail">
-                            </div>
 
-                            <br>
-                            <a href="#"
-                               class="list-group-item list-group-item-action flex-column align-items-start active">
-                                <div class="d-flex w-100 justify-content-between bg-light">
-                                    <h4 class="mb-1">Price</h4>
-                                    <!--<small>3 days ago</small>-->
-                                </div>
-                                <p class="mb-1">
 
-                                    $11.99</p>
-                                <!--<small>Donec id elit non mi porta.</small>-->
-                            </a>
-                            <br>
-                            <br>
-                            <input type="number" class="form-control" id="input1" placeholder="Enter quantity">
-                        </ul>
-                        <!--right column-->
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Employee size</label>
+                                        <select class="form-select" id="exampleSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Descriptions</label>
+                                        <textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
+                                        <small class="form-text text-muted">Describe the category of your restaurant,
+                                            including what you're selling and any specialities</small>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!--right column-->
                     </div>
                 </div>
 
             </div>
             <div class="modal-footer">
                 <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal"
-                        class="btn btn-primary">Add to cart
+                        class="btn btn-primary">Submit
                 </button>
             </div>
         </div>
@@ -206,6 +231,11 @@
         </div>
     </div>
 </footer>
+
+<!-- jQuery -->
+<script src="{{ url_for('static', filename='/bs/js/jquery.min.js') }}"></script>
+<!-- Bootstrap JavaScript -->
+<script src="{{ url_for('static', filename='/bs/js/bootstrap.min.js') }}"></script>
 
 </body>
 </html>
