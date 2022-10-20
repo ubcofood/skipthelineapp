@@ -32,15 +32,22 @@
 					
 					<div class="row t20">
 						<div class="col-lg-4 col-lg-offset-4">
-							<ul class="nav nav-pills nav-justified">
+							<ul class="nav nav-pills nav-justified" >
 							  <li role="presentation" class="active">
 							  	<a href="{{url_for('main.index')}}" title="Home">Home</a>
 							  </li>
 							  <li role="presentation">
 							  	<a href="{{url_for('main.add')}}" title="Add Food Item">Add Food Item</a>
 							  </li>
+							
+							  <li role="presentation" >
+								<a href="{{url_for('main.add')}}" title="Add Food Item"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+							</li>
 							</ul>
+					
 						</div>
+
+						
 					</div>
 				</div>
 			</div>
@@ -80,7 +87,7 @@
 					<div class="panel panel-warning">
 						<div class="panel-body text-bold">
 							<!--<i class="glyphicon glyphicon-calendar"></i> -->Tuna roll
-							<a class="btn btn-primary btn-xs pull-right" href="{{url_for('main.view')}}">
+							<a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" >
 								Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
 							</a>
 						</div>
@@ -106,7 +113,7 @@
 							<div class="panel-body text-bold">
 								<!--<i class="glyphicon glyphicon-calendar"></i> -->BLT sandwich
 	
-								<a class="btn btn-primary btn-xs pull-right" href="{{url_for('main.view')}}">
+								<a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right">
 									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
 								</a>
 							</div>
@@ -131,7 +138,7 @@
 							<div class="panel-body text-bold">
 								<!--<i class="glyphicon glyphicon-calendar"></i> -->Butter Chicken
 	
-								<a class="btn btn-primary btn-xs pull-right" href="{{url_for('main.view')}}">
+								<a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" >
 									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
 								</a>
 							</div>
@@ -156,7 +163,7 @@
 							<div class="panel-body text-bold">
 								<!--<i class="glyphicon glyphicon-calendar"></i> -->Mango Smoothie
 	
-								<a class="btn btn-primary btn-xs pull-right" href="{{url_for('main.view')}}">
+								<a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" ">
 									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
 								</a>
 							</div>
@@ -257,7 +264,7 @@
 
 
 
-		  <button type="button" data-dismiss="modal" class="btn btn-primary">Add to cart</button>
+		  <button data-toggle="modal" data-target="#myModal"  type="button" data-dismiss="modal" class="btn btn-primary">Add to cart</button>
 		</div>
 	  </div>
 	</div>
@@ -331,10 +338,20 @@
 
 
 
-		  <button type="button" data-dismiss="modal" class="btn btn-primary">Add to cart</button>
+		  <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal" class="btn btn-primary">Add to cart</button>
 		</div>
 	  </div>
 	</div>
+  </div>
+
+  <!--alert modal-->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="alert alert-success alert-dismissible">
+            <a  class="close" data-dismiss="modal" aria-label="close">&times;</a>
+            <strong>Success!</strong> Added to cart.
+          </div>
+    </div>
   </div>
 
 		<!-- jQuery -->
