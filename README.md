@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Skipthelineubc is an online food ordering system website serving ubco students across different vendors in the UNC building. The web application provide services for vendors, staffs and customers (students) on campus. This application is a food ordering system which has three interfaces i.e. vendor, admin and customer. 
+Skipthelineapp is an online food ordering system website serving ubco students across different vendors in the UNC building. The web application provide services for vendors, staffs and customers (students) on campus. This application is a food ordering system which has three interfaces i.e. vendor, admin and customer. 
 
 ### Functionalities:
 
