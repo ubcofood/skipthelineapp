@@ -18,7 +18,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid col-lg-offset-2">
-        <a class="navbar-brand" href="#">Admin</a>
+        <a class="navbar-brand" href="/adminview">Admin</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/adminView">Vendors Management
+                    <a class="nav-link active" href="/adminview">Vendors Management
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="/adminanalytics">Analytics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Log Out</a>
+                    <a class="nav-link" href="/login">Sign Out</a>
                 </li>
             </ul>
         </div>
@@ -46,7 +46,7 @@
     <div>
         <div class="panel-default">
             <br>
-            <h4><b>Current Vendors</b></h4>
+            <h3><b>Current Vendors</b></h3>
             <br>
         </div>
         <div class="table">
@@ -148,7 +148,8 @@
                             </div>
                             <br>
                             <div>
-                                <small class="form-text text-muted">Uploaded image will be resized to fit within width of 200
+                                <small class="form-text text-muted">Uploaded image will be resized to fit within width
+                                    of 200
                                     pixels
                                     and height of 200
                                     pixels. Must be in either jpg, jpeg, gif or png format</small>
@@ -169,7 +170,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label mt-4">Address</label>
-                                        <input type="text" class="form-control" placeholder="University Centre, 3272 University Way, Kelowna, BC V1V 1V7"></input>
+                                        <input type="text" class="form-control"
+                                               placeholder="University Centre, 3272 University Way, Kelowna, BC V1V 1V7"></input>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label mt-4">UNC Room number</label>
@@ -183,7 +185,6 @@
                                         <label class="form-label mt-4">Phone number</label>
                                         <input type="text" class="form-control" placeholder="123 456 7890">
                                     </div>
-
 
 
                                     <div class="form-group">
@@ -216,10 +217,20 @@
 
             </div>
             <div class="modal-footer">
-                <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal"
+                <button data-toggle="modal" data-target="#editsuccess" type="button" data-dismiss="modal"
                         class="btn btn-primary">Submit
                 </button>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Success Prompt -->
+<div class="modal fade" id="editsuccess" role="dialog">
+    <div class="modal-dialog">
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Success!</strong> <strong>The well</strong> has been updated.
         </div>
     </div>
 </div>
