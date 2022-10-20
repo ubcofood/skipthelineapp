@@ -13,3 +13,19 @@ def add():
 @main.route('/view')
 def view():
     return render_template('view.html')
+
+@main.route('/login')
+def login():
+    return render_template('login.html')
+
+@main.route('/logincustomer')
+def logincustomer():
+    return render_template('login_customer.html')
+
+@main.route('/loginvendor')
+def loginvendor():
+    return render_template('login_vendor.html')
+
+@main.route('/loginadmin')
+def loginadmin():
+    return render_template('login_admin.html')
