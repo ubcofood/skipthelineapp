@@ -37,3 +37,6 @@ def adminview():
 @main.route('/adminanalytics')
 def adminanalytics():
     return render_template('adminAnalytics.html')
+@main.route('/adminviewdeleted')
+def adminviewdeleted():
+    return render_template('adminViewDeleted.html')
