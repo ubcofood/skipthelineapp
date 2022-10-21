@@ -39,4 +39,21 @@ def adminanalytics():
     return render_template('adminAnalytics.html')
 @main.route('/adminviewdeleted')
 def adminviewdeleted():
-    return render_template('adminViewDeleted.html')
+    return render_template('adminViewDeleted.html')    
+
+@main.route('/cart')
+def cart():
+    return render_template('cart.html')
+    
+@main.route('/checkout_cwl')
+def checkout_cwl():
+    return render_template('checkout_cwl.html')
+    
+@main.route('/checkout_card')
+def checkout_card():
+    return render_template('checkout_card.html')    
+
+@main.route('/bill')
+def bill():
+    return render_template('bill.html')
+            
