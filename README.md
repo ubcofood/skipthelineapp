@@ -59,6 +59,86 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
    -`extensions.py`- flask_sqlalchemy extensions
  1. `README.md`- readme file  
 
+### Methods and classes
+
+- Customer Class: 
+   - attributes: 
+      - customer.cid --> customer id
+      - customer.cname --> customer name
+      - customer.cemail --> customer email
+      - customer.cpassword --> customer password
+      - customer.cphone --> customer phone number
+
+   
+- Admin Class: 
+   - attributes:
+      - admin.amail --> admin email
+      - admin.apassword --> admin password   
+
+- Vendor Class: 
+   - attributes: 
+      - vendor.vid --> vendor id
+      - vendor.vname --> vendor name
+      - vendor.vemail --> vendor email
+      - vendor.vphone --> vendor phone number
+
+- Items Class: 
+   - attributes: 
+      - items.iid --> item id
+      - items.iname --> item name
+      - items.idescription --> item description
+      - items.iprice --> item price
+      - items.vid --> vendor id
+     
+- Orders Class: 
+   - attributes: 
+      - order.ohash --> order hash id
+      - order.vid --> vendor id
+      - order.cid --> customer id
+      - order.odate --> order date
+      - order.ostatus --> order status
+      - order.oprice --> order price  
+
+- Methods
+   - index() --> show main page
+   - indexmenu() --> show customer menu page
+   - register() --> register account
+   - login() --> login account
+   - loginNext() --> resolve login issue when no user found or password incorrect
+   - userorders() --> display user's order
+   - showuserprofile() --> show user's profile
+   - updateuserprofile() --> update user's profile
+   - updateuserprofileNext() --> resolve error when user's input does not matches format
+   - logout() --> user sign out
+   - vendormenu() --> display menu for a vendor
+   - vendorlogin() ---> log vendor in
+   - vendorloginNext() --> resolve login issue when no vendor found or password incorrect
+   - vendorhome() --> display vendor main page
+   - vendorviewanalytics() --> display vendor analytics
+   - acceptorreject() --> option for vendor to accept/reject order
+   - restacceptedorders() --> complete order when vendor accept one
+   - showmyrestmenu() --> display current vendor menu
+   - additem() --> add an food item
+   - additemNext() --> resolve issue when misinput an item description
+   - updateitem() --> update a particular item
+   - updateitemNext() --> resolve issue when misinput an item description during updating
+   - deleteitem() --> delete an item
+   - deleteitemNext() --> resolve issue when misinput an item description during deletion
+   - showvendprofile() --> display vendor profile
+   - updatevendprofile() --> update vendor profile
+   - updatevendprofileNext() --> resolve issue when misinput vendor description during editing
+   - vendlogout() --> vendor log out
+   - payment() --> display payment menu
+   - submitorder() --> submit user order
+   - adminlogin() --> display admin login page 
+   - adminloginNext() --> resolve error when admin misinput fields
+   - vendregisterbyadmin() --> admin register a vendor
+   - adminshowvendor() --> display all vendors
+   - adminvendmenu() --> display menu from a vendor
+   - adminlogout() --> admin logout
+   - adminviewanalytics() --> display admin analytics
+   - exportanalytics() --> export analytics
+
 ## How to run the program?
 1. Before running the program, install the python and flask enviroment, make sure they are updated to the latest version. The python interpreter version cannot be earlier than 3.11. To install flask and their python dependencies, checkout https://flask.palletsprojects.com/en/2.2.x/installation/.
 
