@@ -85,7 +85,7 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
       - vendor.vemail --> vendor email
       - vendor.vphone --> vendor phone number
 ```
-- Items Class: 
+- Item Class: 
 ```
    - attributes: 
       - items.iid --> item id
@@ -95,7 +95,7 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
       - items.vid --> vendor id
 ```      
      
-- Orders Class: 
+- Order Class: 
 ```
    - attributes: 
       - order.ohash --> order hash id
