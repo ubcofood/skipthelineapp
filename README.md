@@ -62,35 +62,41 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
 ### Methods and classes
 
 - Customer Class: 
+```
    - attributes: 
       - customer.cid --> customer id
       - customer.cname --> customer name
       - customer.cemail --> customer email
       - customer.cpassword --> customer password
       - customer.cphone --> customer phone number
-
+```
    
 - Admin Class: 
+```
    - attributes:
       - admin.amail --> admin email
       - admin.apassword --> admin password   
-
+```
 - Vendor Class: 
+```
    - attributes: 
       - vendor.vid --> vendor id
       - vendor.vname --> vendor name
       - vendor.vemail --> vendor email
       - vendor.vphone --> vendor phone number
-
+```
 - Items Class: 
+```
    - attributes: 
       - items.iid --> item id
       - items.iname --> item name
       - items.idescription --> item description
       - items.iprice --> item price
       - items.vid --> vendor id
+```      
      
 - Orders Class: 
+```
    - attributes: 
       - order.ohash --> order hash id
       - order.vid --> vendor id
@@ -98,8 +104,10 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
       - order.odate --> order date
       - order.ostatus --> order status
       - order.oprice --> order price  
+```      
 
 - Methods
+```
    - index() --> show main page
    - indexmenu() --> show customer menu page
    - register() --> register account
@@ -138,7 +146,7 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
    - adminlogout() --> admin logout
    - adminviewanalytics() --> display admin analytics
    - exportanalytics() --> export analytics
-
+```
 ## How to run the program?
 1. Before running the program, install the python and flask enviroment, make sure they are updated to the latest version. The python interpreter version cannot be earlier than 3.11. To install flask and their python dependencies, checkout https://flask.palletsprojects.com/en/2.2.x/installation/.
 
