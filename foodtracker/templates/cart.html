@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+<body>
+
+		<div class="container-fluid" id="wrapper">
+
+			<div class="row" id="homeJumbo">
+				<div class="overlay"></div>
+				<div class="col-lg-12">
+					<h1>
+				YOUR CART
+					</h1>
+
+					<div class="row t20">
+						<div class="col-lg-4 col-lg-offset-4">
+							<ul class="nav nav-pills nav-justified">
+							  <li role="presentation">
+							  	<a href="{{url_for('main.index')}}" title="Home"> Home</a>
+							  </li>
+								<li role="presentation">
+							  	<a href="{{url_for('main.add')}}" title="Home">Food Tracker</a>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row t20">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h4 class="lean-h text-black">
+								<center>
+									<span class="glyphicon glyphicon-shopping-cart"></span>
+
+								</center>
+							</h4>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-striped table-hover table-bordered">
+								<thead>
+									<tr>
+										<th style="width: 5%;">Item</th>
+										<th>Item Name</th>
+										<th style="width: 10%;">Cost</th>
+										<th style="width: 20%;">Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<!--Image-->
+											<div class="panel-body text-bold">
+							<img src="{{url_for('static', filename='img/sushi_tuna_roll.jpg')}}" alt="Responsive image" class="img-fluid">
+					  </div>
+										</td><td>Tuna Roll</td><td>$14.39</td>
+										<td>
+											<a href="#" class="btn btn-danger btn-xs">
+												<i class="glyphicon glyphicon-trash"></i> Delete
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="panel-body text-bold">
+							<img src="{{url_for('static', filename='img/well_blt.jpeg')}}" alt="Responsive image" class="img-fluid">
+					  </div>
+										</td><td>BLT Sandwich</td><td>11.99</td>
+										<td>
+											</a>
+											<a href="#" class="btn btn-danger btn-xs">
+												<i class="glyphicon glyphicon-trash"></i> Delete
+											</a>
+										</td>
+									</tr>
+
+								<tr>
+										<td>
+										<p class = "h2"><b><center>Total </center></b></p>
+										</td><td></td></td><td>
+									<b>$ 26.38</b> </td>
+
+									<td>
+											</a>
+		  <button style="background-color:#000080" class="btn btn-primary">
+			  	  <a href="{{url_for('main.checkout_cwl')}}" title="checkout">
+					  <p style="color:white">Pay with UBC Card</p></button>
+											</a>
+										<br>
+										<br>
+										<a href="#">
+		  <button type="button" style="background-color:#008000;" class= "btn btn-primary">
+			  <a href="{{url_for('main.checkout_card')}}" title="checkout"> <p style="color:white">Pay with Credit Card</p></a>
+                  </button>
+										</a>
+										</td>
+
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+</body>
+</html>
