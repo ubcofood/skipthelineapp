@@ -1,6 +1,6 @@
 # Skipthelineapp 
 
-## Introduction
+## Description
 
 Skipthelineapp is an online food ordering system website serving UBC students across different vendors in the UNC building. The web application provides services for vendors, staff and customers (students) on campus. This application is a food ordering system with three interfaces i.e. vendor, admin and customer. Users can access the system with their unique credentials pre-registered on the website, and the login page has a selection menu that allows users to log in with the corresponding portal.
 
