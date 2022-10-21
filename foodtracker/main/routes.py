@@ -57,3 +57,4 @@ def checkout_card():
 def bill():
     return render_template('bill.html')
             
+
