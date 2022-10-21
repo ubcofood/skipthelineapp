@@ -24,14 +24,16 @@ The options available to the Customer are view menu, sign up and log in, create 
 
 ### Language used:
 
-Python/Flask web framework; HTML/CSS/JavaScript
+Python/Flask Web Framework; HTML/CSS/JavaScript
 
 ### Breakdown of the code structure:
 
 1. `/.idea` - project configuration files
+
 1. `/env` - enviroment folder 
    - `/Lib/site-packages` Python packages
    - `/Scripts/` Python enviroments
+   
 1. `/foodtracker` - project folder
    - `/__pycache__` python cache
    - `/main` main folder
@@ -41,17 +43,18 @@ Python/Flask web framework; HTML/CSS/JavaScript
       - `/fonts` Fonts folder, add new font here
       - `/js` Javascripts foder, add new script here
    - `/template` - html files resource, where individual html page get stored
-      -`add.html` add new item 
-      -`adminAnalytics.html` Admin Analytics
-      -`adminView.html` Admin View
-      -`bill.html` Billing View
-      -`cart.html` Cart View
-      -`index.html` Customer View
-      -`login.html` Login Naviagtion View
-      -`login_admin.html` Admin Login View
-      -`login_customer.html` Customer Login View
-      -`login_vendor.html` Vendor Login View
-      -`view.html` Description View
+   
+         -  `add.html` add new item 
+         -  `adminAnalytics.html` Admin Analytics
+         -  `adminView.html` Admin View
+         -  `bill.html` Billing View
+         -  `cart.html` Cart View
+         -  `index.html` Customer View
+         -  `login.html` Login Naviagtion View
+         -  `login_admin.html` Admin Login View
+         -  `login_customer.html` Customer Login View
+         -  `login_vendor.html` Vendor Login View
+         -  `view.html` Description View  
    -`models.py`- contains user model classes, add new classes here
    -`extensions.py`- flask_sqlalchemy extensions
  1. `README.md`- readme file  
