@@ -14,9 +14,9 @@ The Admin portal provides access for new vendors to register and edit their prof
 
 Each user can interact with the system to perform an activity.
 
-The login page has three navigation tabs allowing different types of user to log in accordingly.
+The login page has three navigation tabs allowing different types of users to log in accordingly.
 
-The options avaliable to the Admin are edit vendor list, update vendor logo, edit vendor's details, create vendor's account,add/remove vendors, export vendor data and view vendor analytics.
+The options available to the Admin are edit vendor list, update vendor logo, edit vendor's details, create vendor's account,add/remove vendors, export vendor data and view vendor analytics.
 
 The options available to the Vendor are add food category, add food details, add food allergens, edit food descriptions, view order number, view order descriptions, update food order, edit menus, upload product picture, view revenue, view analytics and delete order.
 
@@ -148,12 +148,12 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
    - exportanalytics() --> export analytics
 ```
 ## How to run the program?
-1. Before running the program, install the python and flask enviroment, make sure they are updated to the latest version. The python interpreter version cannot be earlier than 3.11. To install flask and their python dependencies, checkout https://flask.palletsprojects.com/en/2.2.x/installation/.
+1. Before running the program, install the python and flask environments and make sure they are updated to the latest version. The python interpreter version cannot be earlier than 3.11. To install flask and its python dependencies, check out https://flask.palletsprojects.com/en/2.2.x/installation/.
 
 1. Download the project files from the repository, open the project folder in your code editor/IDE.
-2. In terminal, type the following commands to preconfigure the enviroment 
+2. In terminal, type the following commands to preconfigure the environment 
 ```
- #start envirnoment
+ #start environment
  env\scripts\activate.bat
 
  #add packages
