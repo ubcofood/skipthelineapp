@@ -22,7 +22,7 @@ The options available to the Vendor are add food category, add food details, add
 
 The options available to the Customer are view menu, sign up and log in, create an order, add item into cart, checkout and view order details and status.
 
-### Language used:
+### Languages used:
 
 Python/Flask Web Framework; HTML/CSS/JavaScript
 
