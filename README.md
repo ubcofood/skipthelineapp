@@ -10,7 +10,7 @@ The program also has the vendor's portal allowing them to view current orders on
 
 The Admin portal provides access for new vendors to register and edit their profiles, it also has the functionality to remove a current vendor. The Admin Analytic tab provides a summary of all vendors and their performance, such as their daily transaction rate, monthly revenue rate and customer distribution. Each vendor has the option to disclose their sale data or otherwise, and only those data with the vendor's permission can only send to the admin's portal.
 
-### Functionalities:
+### Classes descriptions and functionalities:
 
 Each user can interact with the system to perform an activity.
 
@@ -28,12 +28,33 @@ Python/Flask web framework; HTML/CSS/JavaScript
 
 ### Breakdown of the code structure:
 
-----This needs to get updated----
-1. /main - application source files
-   - model.py contains user model classes
-   - view.py blueprint of web views in subclasses
-   - /template where individual html pages get stored
-1. app.py - holds the codes for the web application - I think
+1. `/.idea` - project configuration files
+1. `/env` - enviroment folder 
+   - `/Lib/site-packages` Python packages
+   - `/Scripts/` Python enviroments
+1. `/foodtracker` - project folder
+   - `/__pycache__` python cache
+   - `/main` main folder
+      - routes.py - html routes, create classes here before adding any new pages
+   - `/static` - html resources
+      - `/css` CSS folder, add css styles here
+      - `/fonts` Fonts folder, add new font here
+      - `/js` Javascripts foder, add new script here
+   - `/template` - html files resource, where individual html page get stored
+      -`add.html` add new item 
+      -`adminAnalytics.html` Admin Analytics
+      -`adminView.html` Admin View
+      -`bill.html` Billing View
+      -`cart.html` Cart View
+      -`index.html` Customer View
+      -`login.html` Login Naviagtion View
+      -`login_admin.html` Admin Login View
+      -`login_customer.html` Customer Login View
+      -`login_vendor.html` Vendor Login View
+      -`view.html` Description View
+   -`models.py`- contains user model classes, add new classes here
+   -`extensions.py`- flask_sqlalchemy extensions
+ 1. `README.md`- readme file  
 
 ## How to run the program?
 1. Before running the program, install the python and flask enviroment, make sure they are updated to the latest version. The python interpreter version cannot be earlier than 3.11. To install flask and their python dependencies, checkout https://flask.palletsprojects.com/en/2.2.x/installation/.
@@ -41,10 +62,10 @@ Python/Flask web framework; HTML/CSS/JavaScript
 1. Download the project files from the repository, open the project folder in your code editor/IDE.
 2. In terminal, type the following commands to preconfigure the enviroment 
 ```
-#start envirnoment
-env\scripts\activate.bat
+ #start envirnoment
+ env\scripts\activate.bat
 
-#add packages
+ #add packages
  pip install flask
  pip install flask-sqlalchemy
  pip install python-dotenv
