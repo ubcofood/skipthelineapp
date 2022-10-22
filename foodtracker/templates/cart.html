@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
 		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
@@ -20,29 +20,37 @@
 </head>
 <body>
 
-		<div class="container-fluid" id="wrapper">
-
-			<div class="row" id="homeJumbo">
-				<div class="overlay"></div>
-				<div class="col-lg-12">
-					<h1>
-				YOUR CART
-					</h1>
-
-					<div class="row t20">
-						<div class="col-lg-4 col-lg-offset-4">
-							<ul class="nav nav-pills nav-justified">
-							  <li role="presentation">
-							  	<a href="{{url_for('main.index')}}" title="Home"> Home</a>
-							  </li>
-								<li role="presentation">
-							  	<a href="{{url_for('main.add')}}" title="Home">Food Tracker</a>
-							  </li>
-							</ul>
-						</div>
+	<div class="container-fluid" id="wrapper">
+			
+		<div class="row" id="homeJumbo">
+			<div class="overlay"></div>
+			<div class="col-lg-12">
+				<h1>
+					<a href="{{url_for('main.index')}}">Your Cart</a>
+				</h1>
+				
+				<div class="row t20">
+					<div class="col-lg-4 col-lg-offset-4">
+						<ul class="nav nav-pills nav-justified" >
+						  <li role="presentation" >
+							  <a href="{{url_for('main.index')}}" title="Home">Home</a>
+						  </li>
+		
+						
+						  <li role="presentation" class="active" >
+							<a href="{{url_for('main.cart')}}" title="Add Food Item"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+						</li>
+						<li role="presentation" >
+							<a href="{{url_for('main.login')}}" title="Log out">Log out</a>
+						</li>
+						</ul>
+				
 					</div>
+
+					
 				</div>
 			</div>
+		</div>
 
 			<div class="row t20">
 				<div class="col-lg-8 col-lg-offset-2">
@@ -102,14 +110,14 @@
 
 									<td>
 											</a>
-		  <button style="background-color:#000080" class="btn btn-primary">
+		  <button style="background-color:#000080" class="btn btn-primary btn-block">
 			  	  <a href="{{url_for('main.checkout_cwl')}}" title="checkout">
 					  <p style="color:white">Pay with UBC Card</p></button>
 											</a>
 										<br>
-										<br>
+										
 										<a href="#">
-		  <button type="button" style="background-color:#008000;" class= "btn btn-primary">
+		  <button type="button" style="background-color:#008000;" class= "btn btn-primary btn-block">
 			  <a href="{{url_for('main.checkout_card')}}" title="checkout"> <p style="color:white">Pay with Credit Card</p></a>
                   </button>
 										</a>
@@ -123,6 +131,10 @@
 					</div>
 				</div>
 			</div>
+			<!-- jQuery -->
+		<script src="{{url_for('static', filename='/bs/js/jquery.min.js')}}"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="{{url_for('static', filename='/bs/js/bootstrap.min.js')}}"></script>
 
 </body>
 </html>
