@@ -56,5 +56,16 @@ def checkout_card():
 @main.route('/bill')
 def bill():
     return render_template('bill.html')
-            
+
+@main.route('/orderlist')
+def orderlist():
+    return render_template('orderlist.html')
+
+@main.route('/vendor_menu')
+def vendor_menu():
+    return render_template('vendor_menu.html')
+
+@main.route('/vendor_analytics')
+def vendor_analytics():
+    return render_template('vendor_analytics.html')
 
