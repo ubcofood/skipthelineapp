@@ -69,3 +69,6 @@ def vendor_menu():
 def vendor_analytics():
     return render_template('vendor_analytics.html')
 
+@main.route('/vendorEmployee')
+def vendorEmployee():
+    return render_template('vendorEmployee.html')

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skip the line | Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/united.bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/bootstrap.css') }}"/>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="../static/bs/css/buttonstyle.css">
+
+
+</head>
+<body class="body">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid col-lg-offset-2">
+        <a class="navbar-brand" href="/adminview">Admin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/adminview">Vendors Management
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminanalytics">Analytics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Vendor table -->
+<main>
+    <div>
+        <div class="panel-default">
+            <br>
+            <h3><b>Current Vendors</b></h3>
+            <br>
+        </div>
+        <div class="table roundedCorners">
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th style="width: 5%;">Logo</th>
+                    <th style="width: 17%;">Name</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                             width="100" height="100" class="img-rounded">
+                    </td>
+                    <td>The well</td>
+                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
+                    <td>
+                        <a class="btn btn-secondary btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </a>
+                        <a href="/adminviewdeleted" class="btn btn-danger btn-xs">
+                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='img/sushi_logo.png') }}" alt="..."
+                             width="100" height="100" class="img-rounded">
+                    </td>
+                    <td>Koi Sushi</td>
+                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
+                    <td>
+                        <a href="#" class="btn btn-secondary btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-xs">
+                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='img/fusion_logo.png') }}" alt="..."
+                             width="100" height="100" class="img-rounded">
+                    </td>
+                    <td>Fusion Express</td>
+                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
+                    <td>
+                        <a href="#" class="btn btn-secondary btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-xs">
+                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--add floating button-->
+    <a href="#" class="float buttonstyle " data-toggle="modal" data-target="#thewelleditmodal">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+
+</main>
+
+<!-- The well modal-->
+<div class="modal fade " id="thewelleditmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title center-block" id="exampleModalLabel"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!--left column-->
+                        <div class="panel-body text-bold">
+                            <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                                 width="300px" height="300px" class="img-rounded>
+                        </div>
+                        <br>
+                        <ul class="list-group">
+                            <div class="d-grid gap-2">
+                                <label class="btn btn-light bg-light border-light" type="button" for="uploadbtn">
+                                    <i class="glyphicon glyphicon-cloud-upload"></i> Update Logo
+                                </label>
+                                <input type="file" id="uploadbtn" hidden/></input>
+                            </div>
+                            <br>
+                            <div>
+                                <small class="form-text text-muted">Uploaded image will be resized to fit within width
+                                    of 200
+                                    pixels
+                                    and height of 200
+                                    pixels. Must be in either jpg, jpeg, gif or png format</small>
+                            </div>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <ul class="list-group-item">
+                            <form>
+                                <fieldset>
+                                    <legend>Edit details</legend>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Name</label>
+                                        <input type="text" class="form-control" placeholder="The Well">
+                                        <small id="emailHelp" class="form-text text-muted">Enter the name of your
+                                            restaurant here</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Address</label>
+                                        <input type="text" class="form-control"
+                                               placeholder="University Centre, 3272 University Way, Kelowna, BC V1V 1V7"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">UNC Room number</label>
+                                        <input type="text" class="form-control" placeholder="UNC125">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Email</label>
+                                        <input type="text" class="form-control" placeholder="thewell@ubc.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Phone number</label>
+                                        <input type="text" class="form-control" placeholder="123 456 7890">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Employee size</label>
+                                        <select class="form-select" id="exampleSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label mt-4">Descriptions</label>
+                                        <textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
+                                        <small class="form-text text-muted">Describe the category of your restaurant,
+                                            including what you're selling and any specialities</small>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!--right column-->
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button data-toggle="modal" data-target="#editsuccess" type="button" data-dismiss="modal"
+                        class="btn btn-primary bg-primary border-primary">Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Success Prompt -->
+<div class="modal fade" id="editsuccess" role="dialog">
+    <div class="modal-dialog">
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Success!</strong> <strong>The well</strong> has been updated.
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="row pad">
+        <div class="col-lg-12 text-center">
+            Copyright &copy; 2022 <strong>UBC SUO: Skip the line</strong>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="{{ url_for('static', filename='/bs/js/jquery.min.js') }}"></script>
+<!-- Bootstrap JavaScript -->
+<script src="{{ url_for('static', filename='/bs/js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
