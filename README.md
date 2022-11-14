@@ -1,5 +1,24 @@
 # Skipthelineapp 
 
+## Updated features in Assignment 3
+
+- Export menu pdf in Vendor Menu page with pdfkit library integration
+   - Note that this feature requires installation of both pdfkit and wkhtmltopdf packages before running the program, which can be done by running these commands:
+   ```
+   pip install pdfkit
+   brew install wkhtmltopdf // Mac with homebrew installed
+   ```
+   - For windows, download the wkhtmltopdf program on http://wkhtmltopdf.googlecode.com/files/wkhtmltox-0.11.0_rc1-installer.exe and follow the instructions.
+   
+- Time display on Vendor order page using pytime library
+- Time display on checkout pages with UBC ID and Credit/Debit Cards
+- Export analytic pdf in Vendor/Admin Analytic page with pdfkit library integration
+- Vendor Page UI fixes
+
+- Firebase Integration
+
+
+
 ## Description
 
 Skipthelineapp is an online food ordering system website serving UBC students across different vendors in the UNC building. The web application provides services for vendors, staff and customers (students) on campus. This application is a food ordering system with three interfaces i.e. vendor, admin and customer. Users can access the system with their unique credentials pre-registered on the website, and the login page has a selection menu that allows users to log in with the corresponding portal.
