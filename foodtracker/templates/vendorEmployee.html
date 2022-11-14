@@ -15,9 +15,9 @@
 </head>
 <body class="body">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid col-lg-offset-2">
-        <a class="navbar-brand" href="/adminview">Admin</a>
+        <a class="navbar-brand" href="/adminview">Vendor</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,14 +25,19 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/adminview">Vendors Management
-                        <span class="visually-hidden">(current)</span>
-                    </a>
+                    <a class="nav-link" href="/orderlist">Current Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/adminanalytics">Analytics</a>
+                    <a class="nav-link active" href="/vendorEmployee">Employee</a>
+                    <span class="visually-hidden">(current)</span>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/vendor_analytics">Analytics</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/vendor_menu">Menu</a>
+                </li>
+				<li class="nav-item">
                     <a class="nav-link" href="/login">Sign Out</a>
                 </li>
             </ul>
@@ -43,67 +48,102 @@
 <!-- Vendor table -->
 <main>
     <div>
-        <div class="panel-default">
+        <br>
+        <div class="panel-default col-md-6">
+
             <br>
-            <h3><b>Current Vendors</b></h3>
+            <h2>Employee Panel &#128084;</h2>
             <br>
+            <p> List of Employee will be displayed below. You can replace, edit, remove personals and manage their salaries. </p>
+            <br>
+            <h3>Koi Sushi's Employee List:</h3>
+            <br>
+        </div>
+
+        <div class="panel-default col-md-6">
+            <h3>&#10024;Employee of the week &#10024;</h3>
+            <img src="{{ url_for('static', filename='img/karen.png') }}" alt="..."
+                             width="150" height="150" class="img-rounded">
+            <p class="col-md-5">Our employee of the week is Karen! For the past months she has been dedicated, well-organised and helped our shop made the transistion to online food ordering.</p>
+
         </div>
         <div class="table roundedCorners">
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                 <tr>
-                    <th style="width: 5%;">Logo</th>
+                    <th>Photo</th>
                     <th style="width: 17%;">Name</th>
-                    <th>Address</th>
+                    <th>Role</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
-                        <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                        <img src="{{ url_for('static', filename='img/karen.png') }}" alt="..."
                              width="100" height="100" class="img-rounded">
                     </td>
-                    <td>The well</td>
-                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
                     <td>
-                        <a class="btn btn-secondary btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
-                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        <h4>Karen White</h4>
+                    </td>
+                    <td>
+                        <h4>Cashier<h4> <h4>Manager</h4>
+                            <h5 class="text-bg-info  rounded-pill text-center col-md-4">Full Time</h5>
+                            <h5 class="text-bg-success rounded-pill text-center col-md-7">Skiptheline Admin</h5>
+
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-xs rounded-3" data-toggle="modal" data-target="#thewelleditmodal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit Salary
                         </a>
-                        <a href="/adminviewdeleted" class="btn btn-danger btn-xs">
-                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        <a  class="btn btn-danger btn-xs rounded-3">
+                            <i class="glyphicon glyphicon-trash"></i> Remove Employee
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="{{ url_for('static', filename='img/sushi_logo.png') }}" alt="..."
+                        <img src="{{ url_for('static', filename='img/rob.png') }}" alt="..."
                              width="100" height="100" class="img-rounded">
                     </td>
-                    <td>Koi Sushi</td>
-                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
                     <td>
-                        <a href="#" class="btn btn-secondary btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
-                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        <h4>Rob Banks</h4>
+                    </td>
+                    <td>
+                        <h4>Chef<h4> <h4>Stock Manager</h4>
+                            <h5 class="text-bg-secondary col-lg-4 rounded-pill text-center col-md-3">Part Time</h5>
+
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-xs rounded-3" data-toggle="modal" data-target="#thewelleditmodal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit Salary
                         </a>
-                        <a href="#" class="btn btn-danger btn-xs">
-                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        <a  class="btn btn-danger btn-xs rounded-3">
+                            <i class="glyphicon glyphicon-trash"></i> Remove Employee
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="{{ url_for('static', filename='img/fusion_logo.png') }}" alt="..."
+                        <img src="{{ url_for('static', filename='img/ben.png') }}" alt="..."
                              width="100" height="100" class="img-rounded">
                     </td>
-                    <td>Fusion Express</td>
-                    <td>University Centre, UNC125, 3272 University Way, Kelowna, BC V1V 1V7</td>
                     <td>
-                        <a href="#" class="btn btn-secondary btn-xs" data-toggle="modal" data-target="#thewelleditmodal">
-                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        <h4>Ben Dover</h4>
+                    </td>
+                    <td>
+                        <h4>Chef<h4> <h4>Backup cashier</h4>
+
+                            <h5 class="text-bg-secondary col-lg-4 rounded-pill text-center col-md-3">Part Time</h5>
+
+
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-xs rounded-3" data-toggle="modal" data-target="#thewelleditmodal">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit Salary
                         </a>
-                        <a href="#" class="btn btn-danger btn-xs">
-                            <i class="glyphicon glyphicon-trash"></i> Remove
+                        <a  class="btn btn-danger btn-xs rounded-3">
+                            <i class="glyphicon glyphicon-trash"></i> Remove Employee
                         </a>
                     </td>
                 </tr>

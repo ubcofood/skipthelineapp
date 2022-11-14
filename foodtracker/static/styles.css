@@ -126,3 +126,15 @@ footer {
 	cursor: pointer;
  }
 
+ .ubc-blue{
+	background-color: #002145;
+ }
+ .ubc-blue-secondary{
+background-color: #0055B7;
+ }
+
+ input.largerCheckbox {
+            width: 40px;
+            height: 40px;
+        }
+

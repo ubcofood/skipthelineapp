@@ -11,13 +11,22 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="../static/bs/css/style.css">
 
+    <!-- py-script -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <py-env>
+        - pdfkit
+    </py-env>
+
 
 </head>
-<body >
+<body>
+
 <!-- partial:index.partial.html -->
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark ubc-blue">
     <div class="container-fluid col-lg-offset-2">
         <a class="navbar-brand" href="/adminview">Admin</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
@@ -65,13 +74,15 @@
             <br>
             <div id="pie-chart"></div>
             <br>
-            <button data-toggle="modal" data-target="#downloadsuccess" data-dismiss="modal"
-                    class="btn btn-block btn-primary bg-primary border-primary" type="button">
-                <i class="glyphicon glyphicon-cloud-download"></i> Download report in PDF file
-            </button>
+            <a href="analytics.pdf" download="analytics.pdf">
+                <button data-toggle="modal" data-target="#downloadsuccess" data-dismiss="modal"
+                        class="btn btn-block btn-primary ubc-blue-secondary border-primary" type="button">
+                    <i class="glyphicon glyphicon-cloud-download"></i> Download report in PDF file
+                </button>
+            </a>
             <br>
             <button data-toggle="modal" data-target="#downloadsuccess" data-dismiss="modal"
-                    class="btn btn-block btn-primary bg-primary border-primary" type="button">
+                    class="btn btn-block btn-primary ubc-blue-secondary border-primary" type="button">
                 <i class="glyphicon glyphicon-cloud-download"></i> Export report in CSV format
             </button>
         </div>
