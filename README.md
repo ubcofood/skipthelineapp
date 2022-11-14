@@ -1,5 +1,62 @@
 # Skipthelineapp 
 
+## Updated features in Assignment 3
+
+- Export menu pdf in Vendor Menu page with pdfkit library integration
+   - Enables vendors to export their menus for promotional purposes
+   - Note that this feature requires installation of both pdfkit and wkhtmltopdf packages before running the program, which can be done by running these commands:
+   
+   ```
+   pip install pdfkit
+   brew install wkhtmltopdf // Mac with homebrew installed
+   ```
+   - For windows, download the wkhtmltopdf program on http://wkhtmltopdf.googlecode.com/files/wkhtmltox-0.11.0_rc1-installer.exe and follow the instructions.
+  
+   - Sample Outputs:
+      - See screenshot or video for sample outputs
+   
+- Time display on Vendor order page using pytime library
+  - Allow vendor to view the current time and order times from customers which helps them to prioritize orders based on their time.
+  
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+      
+- Time display on checkout pages with UBC ID and Credit/Debit Cards
+  - Allow customer to view the current time of ordering and the deadline for user to complete transaction before order gets expired.
+  
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+  
+- Export analytic pdf in Vendor/Admin Analytic page with pdfkit library integration
+  - Allow Vendor/Admin to download and export their sales data to print and organize right under the page.
+  
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+ 
+- Integrated scripts that allows the order panel to refresh page every ten seconds
+  - Allow vendors to see new orders without the need of manually refresh the page, and the system will automatic show new order once customer has placed one.
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+      
+- Vendor Page UI fixes
+  - Improved design and layouts, used custom titles and different icon to help user differentiate the pages.
+  - Cancel button on the checkout page allows user to cancel order immediately
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+      
+  
+- Firebase Integration
+  - Allow user to login to the system with pre-registered accounts, firebase allows quick configuration that enable us to register accounts through the portal and manage their data.
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+  
+- Email receipts
+  - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+
+
+
 ## Description
 
 Skipthelineapp is an online food ordering system website serving UBC students across different vendors in the UNC building. The web application provides services for vendors, staff and customers (students) on campus. This application is a food ordering system with three interfaces i.e. vendor, admin and customer. Users can access the system with their unique credentials pre-registered on the website, and the login page has a selection menu that allows users to log in with the corresponding portal.
