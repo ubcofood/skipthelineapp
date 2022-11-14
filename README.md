@@ -42,6 +42,7 @@
   - Improved design and layouts, used custom titles and different icon to help user differentiate the pages.
   - Cancel button on the checkout page allows user to cancel order immediately
   - Sample Outputs:
+  
       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.15.54%20PM.png?raw=true)
       
   
