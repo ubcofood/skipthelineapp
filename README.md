@@ -1,6 +1,6 @@
 # Skipthelineapp 
 
-## Updated features in Assignment 3
+## Updated features in Assignment 3 📝
 
 - Export menu pdf in Vendor Menu page with pdfkit library integration
    - Enables vendors to export their menus for promotional purposes
@@ -13,36 +13,36 @@
    - For windows, download the wkhtmltopdf program on http://wkhtmltopdf.googlecode.com/files/wkhtmltox-0.11.0_rc1-installer.exe and follow the instructions.
   
    - Sample Outputs:
-      - See screenshot or video for sample outputs
+      - See `analytic.pdf` file in the `sampleoutputs` folder
    
 - Time display on Vendor order page using pytime library
   - Allow vendor to view the current time and order times from customers which helps them to prioritize orders based on their time.
   
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.15.42%20PM.png?raw=true)
       
 - Time display on checkout pages with UBC ID and Credit/Debit Cards
   - Allow customer to view the current time of ordering and the deadline for user to complete transaction before order gets expired.
   
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.18.07%20PM.png?raw=true)
   
 - Export analytic pdf in Vendor/Admin Analytic page with pdfkit library integration
   - Allow Vendor/Admin to download and export their sales data to print and organize right under the page.
   
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.16.21%20PM.png?raw=true)
  
 - Integrated scripts that allows the order panel to refresh page every ten seconds
   - Allow vendors to see new orders without the need of manually refresh the page, and the system will automatic show new order once customer has placed one.
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      - See video for sample outputs
       
 - Vendor Page UI fixes
   - Improved design and layouts, used custom titles and different icon to help user differentiate the pages.
   - Cancel button on the checkout page allows user to cancel order immediately
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.15.54%20PM.png?raw=true)
       
   
 - Firebase Integration
@@ -57,7 +57,7 @@
 
 
 
-## Description
+## Description 📄
 
 Skipthelineapp is an online food ordering system website serving UBC students across different vendors in the UNC building. The web application provides services for vendors, staff and customers (students) on campus. This application is a food ordering system with three interfaces i.e. vendor, admin and customer. Users can access the system with their unique credentials pre-registered on the website, and the login page has a selection menu that allows users to log in with the corresponding portal.
 
@@ -79,7 +79,7 @@ The options available to the Vendor are add food category, add food details, add
 
 The options available to the Customer are view menu, sign up and log in, create an order, add item into cart, checkout and view order details and status.
 
-### Languages used:
+### Languages used 🧑‍💻
 
 Python/Flask Web Framework; HTML/CSS/JavaScript
 
@@ -204,7 +204,7 @@ Python/Flask Web Framework; HTML/CSS/JavaScript
    - adminviewanalytics() --> display admin analytics
    - exportanalytics() --> export analytics
 ```
-## How to run the program?
+## How to run the program 💻 ?
 1. Before running the program, install the python and flask environments and make sure they are updated to the latest version. The python interpreter version cannot be earlier than 3.11. To install flask and its python dependencies, check out https://flask.palletsprojects.com/en/2.2.x/installation/.
 
 1. Download the project files from the repository, open the project folder in your code editor/IDE.
