@@ -11,6 +11,13 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="../static/bs/css/buttonstyle.css">
 
+    <script>
+    function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 10000);
+    </script>
+
     <style>
         .name_table td {
              height: 100px;
@@ -21,6 +28,15 @@
             vertical-align: center;
         }
     </style>
+
+
+    <!-- py-script -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <py-env>
+        - pytime
+    </py-env>
 
 </head>
 <body class="body">
@@ -35,9 +51,8 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/orderlist">List of Orders
-                        <span class="visually-hidden">(current)</span>
-                    </a>
+                    <a class="nav-link active" href="/orderlist">Current Orders</a>
+                    <span class="visually-hidden">(current)</span>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/vendorEmployee">Employee</a>
@@ -45,10 +60,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/vendor_analytics">Analytics</a>
                 </li>
-                <li class="nav-item">
+				<li class="nav-item">
                     <a class="nav-link" href="/vendor_menu">Menu</a>
                 </li>
-                <li class="nav-item">
+				<li class="nav-item">
                     <a class="nav-link" href="/login">Sign Out</a>
                 </li>
             </ul>
@@ -59,25 +74,46 @@
 <!-- Order table -->
 <main>
     <div>
-        <div class="panel-default">
+        <div class="panel-default col-md-6">
             <br>
-            <h3><b>List of Orders</b></h3>
+            <h2>Welcome, KoiSushi &#127843;</h2>
             <br>
+            <p> Current Orders will be displayed below. Note that you can change, edit, and cancel orders on the action panel, order unpaid will automatically gets cancelled 30 mins after their order placed time. </p>
+            <br>
+            <h3>Orders</h3>
+            <br>
+        </div>
+
+        <div class="panel-body col-md-6">
+            <h3>Current time:</h3>
+            <br>
+            <h3 class = "text-bg-info rounded-4 text-center">
+            <py-script class="py-title">
+                    import datetime
+                    (datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            </py-script>
+                </h3>
+
         </div>
         <div class="table roundedCorners">
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                 <tr>
-                    <th style="width: 5%;">Order Number</th>
-                    <th style="width: 5%;">Picture</th>
-                    <th style="width: 30%;">Item Name</th>
-                    <th>Complete</th>
-                    <th>Action</th>
+                    <th style="width: 27%;">Order Number</th>
+                    <th style="width: 5%;">Image</th>
+                    <th style="width: 23%;">Item Name</th>
+                    <th style="width: 1%;">Complete</th>
+                    <th class>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td><h2>X92123</h2></td>
+                    <td>
+                        <h3 class = "text-bg-warning rounded-pill text-center">Priority</h3>
+                        <h1>X92123</h1>
+                        <h4>Jason</h4>
+                        <h5>Time ordered: 15:30</h5>
+                    </td>
                     <td>
                         <table>
                             <tr>
@@ -103,13 +139,24 @@
                     <td>
                         <table class ="name_table">
                             <tr>
-                                <td><h2>tuna roll</h2></td>
+                                <td>
+                                    <h3 class="text-bg-primary rounded-pill text-center">Tuna roll</h3>
+                                    <h4>Quantity: 2 </h4>
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><h2>miso soup</h2></td>
+                                <td>
+                                    <h3 class="text-bg-primary rounded-pill text-center"> Miso soup </h3>
+                                    <h4>Quantity: 1 </h4>
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><h2>edamame</h2></td>
+                                <td>
+                                    <h3 class="text-bg-primary rounded-pill text-center ">Edamame</h3>
+                                    <h4>Quantity: 1 </h4> <h6> Customer Note: No Seaweed</h6>
+                                </td>
                             </tr>
                         </table>
                     </td>
@@ -117,19 +164,19 @@
                         <table class ="check_box">
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="item" name="item">
+                                    <input type="checkbox" id="item" name="item" class="largerCheckbox">
                                     <label for="item"></label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="item" name="item">
+                                    <input type="checkbox" id="item" name="item" class="largerCheckbox" >
                                     <label for="item"></label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="item" name="item">
+                                    <input type="checkbox" id="item" name="item" class="largerCheckbox">
                                     <label for="item"></label>
                                 </td>
                             </tr>
@@ -138,7 +185,7 @@
                
                     <td>
                         <a class="btn btn-success">
-                             Notify Done
+                             Call to collect
                         </a>
                         <a  type="button" class="btn btn-danger">
                             <i class="glyphicon glyphicon-trash"></i> Delete
@@ -146,7 +193,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><h2>X92124</h2></td>
+                    <td>
+                        <h1>X92124</h1>
+                        <h4>Rob</h4>
+                        <h5>Time ordered: 15:40</h5>
+                    </td>
                     <td>
                         <table>
                             <tr>
@@ -172,13 +223,25 @@
                     <td>
                         <table class ="name_table">
                             <tr>
-                                <td><h2>tuna roll</h2></td>
+                                <td>
+                                    <h3 class="text-bg-primary rounded-pill text-center">Tuna roll</h3>
+                                    <h4>Quantity: 2 </h4> <h6> Customer Note: Extra soy sauce</h6>
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><h2>miso soup</h2></td>
+                                <td>
+                                    <h3 class="text-bg-primary rounded-pill text-center"> Miso soup <br> </h3>
+                                    <h4>Quantity: 1 </h4>
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><h2>edamame</h2></td>
+                                <td>
+                                    <h3 class="text-bg-primary rounded-pill text-center ">Edamame
+                                    </h3>
+                                    <h4>Quantity: 1 </h4>
+                                </td>
                             </tr>
                         </table>
                     </td>
@@ -186,19 +249,19 @@
                         <table class ="check_box">
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="item" name="item">
+                                    <input type="checkbox" id="item" name="item" class="largerCheckbox">
                                     <label for="item"></label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="item" name="item">
+                                    <input type="checkbox" id="item" name="item" class="largerCheckbox">
                                     <label for="item"></label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" id="item" name="item">
+                                    <input type="checkbox" id="item" name="item" class="largerCheckbox">
                                     <label for="item"></label>
                                 </td>
                             </tr>
@@ -206,8 +269,9 @@
                     </td>
                     <td>
                         <a class="btn btn-success">
-                             Notify Done
+                             Call to collect
                         </a>
+
                         <a  class="btn btn-danger">
                             <i class="glyphicon glyphicon-trash"></i> Delete
                         </a>

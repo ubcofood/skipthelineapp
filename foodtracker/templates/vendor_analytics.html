@@ -27,20 +27,20 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/orderlist">List of Orders
-                    </a>
+                    <a class="nav-link" href="/orderlist">Current Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Employee</a>
+                    <a class="nav-link" href="/vendorEmployee">Employee</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="/vendor_analytics">Analytics</a>
                     <span class="visually-hidden">(current)</span>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/vendor_menu">Menu</a>
+				<li class="nav-item">
+                    <a class="nav-link " href="/vendor_menu">Menu
+                    </a>
                 </li>
-                <li class="nav-item">
+				<li class="nav-item">
                     <a class="nav-link" href="/login">Sign Out</a>
                 </li>
             </ul>
@@ -52,32 +52,34 @@
 <main>
     <div>
         <br>
-        <h3><b>Analytic Summaries</b></h3>
+         <h2>KoiSushi's Analytics &#128200;</h2>
         <br>
     </div>
     <div class="flex-container">
         <div>
-            <h5><strong>Weekly Transaction</strong></h5>
+            <h4><strong>Weekly Transaction</strong></h4>
             <br>
             <div id="bar-chart"></div>
-            <h5><strong>Monthly Revenue Trend</strong></h5>
+            <h4><strong>Monthly Revenue Trend</strong></h4>
             <br>
             <div id="line-chart"></div>
         </div>
         <div id="line-chart"></div>
         <div></div>
         <div>
-            <h5><strong>Customer Flows</strong></h5>
+            <h4><strong>Customer Flows</strong></h4>
             <br>
             <div id="pie-chart"></div>
             <br>
+            <a href="analytics.pdf" download="analytics.pdf">
             <button data-toggle="modal" data-target="#downloadsuccess" data-dismiss="modal"
-                    class="btn btn-block btn-primary bg-primary border-primary" type="button">
+                    class="btn btn-block btn-primary ubc-blue-secondary rounded-pill" type="button">
                 <i class="glyphicon glyphicon-cloud-download"></i> Download report in PDF file
             </button>
+                </a>
             <br>
             <button data-toggle="modal" data-target="#downloadsuccess" data-dismiss="modal"
-                    class="btn btn-block btn-primary bg-primary border-primary" type="button">
+                    class="btn btn-block btn-primary ubc-blue-secondary rounded-pill" type="button">
                 <i class="glyphicon glyphicon-cloud-download"></i> Export report in CSV format
             </button>
         </div>
@@ -93,6 +95,7 @@
         </div>
     </div>
 </main>
+
 <!-- partial -->
 <script src="../static/bs/js/script.js"></script>
 

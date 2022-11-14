@@ -4,74 +4,121 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
-		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/united.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- py-script -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <py-env>
+        - pytime
+    </py-env>
 
 </head>
 <body>
 
+<!-- Using pytime library to get order times -->
+<div class="row t20">
+    <div class="col-lg-4 col-lg-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <h3 class="lean-h text-black">
+                    Pay with credit card
+                </h3>
+                <hr/>
+                <div class="row">
 
-            <div class="row t20">
-				<div class="col-lg-4 col-lg-offset-4">
-					<div class="panel panel-default">
-						<div class="panel-body text-center">
-							<h3 class="lean-h text-black">
-								 Pay with credit card
-							</h3>
-							<hr />
-                                <div class="row">
+                    <div class="col-lg-12">
 
-								   <div class="col-lg-12">
+                        <br>
+                        <input type="text" class="form-control" id="food-name" name="food-name"
+                               placeholder="Cardholder name" autofocus>
+                    </div>
+                    <div class="col-lg-12">
+                        <br>
+                        <label for="food-name"></label><input type="text" class="form-control" id="food-name"
+                                                              name="food-name" placeholder="Card number" autofocus>
+                    </div>
+                    <br>
 
-										<br>
-										  <input type="text" class="form-control" id="food-name" name="food-name" placeholder="Cardholder name" autofocus>
-									</div>
-									<div class="col-lg-12">
-										<br>
-										  <input type="text" class="form-control" id="food-name" name="food-name" placeholder="Card number" autofocus>
-									</div>
-									<br>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <br>
+                            <label>Expiry</label>
+                            <label for="email"></label><input type="text" class="form-control" id="email"
+                                                              placeholder="MMYY" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <br>
+                            <label>CVV</label>
+                            <input type="text" class="form-control" id="email" placeholder="CVV" autofocus>
 
-									<div class="col-md-6">
-   								 <div class="form-group">
-									 <br>
-       							<label>Expiry</label>
-   							     <input type="text" class="form-control" id="email" placeholder="MMYY" autofocus>
-								 </div>
-			</div>
-									<div class="col-md-6">
-   								 <div class="form-group">
-									 <br>
-       							<label>CVV</label>
-   							     <input type="text" class="form-control" id="email" placeholder="CVV" autofocus>
-
-   									  </div>
-			</div>
+                        </div>
+                    </div>
 
 
-                        <div class="col-lg-12">
+                    <div class="col-lg-12">
+                        <label style="visibility:hidden">submit</label>
+                        <a href="{{ url_for('main.bill') }}">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <h4 class="lean-h">Checkout</h4>
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <br>
+                        <a href="{{ url_for('main.index') }}">
+                            <button type="submit" class="btn btn-default btn-block">
+                                <h4 class="lean-h">Cancel</h4>
+                            </button>
+                        </a>
+                    </div>
+
+                    <!-- display current time -->
+                    <div class="col-md-6">
+                        <br>
+                        <div class="form-group">
+                            <h4 class="lean">
+                                Time of order:
+                                <py-script class="lean-h">
+                                        import datetime
+                                        datetime.datetime.now().strftime("%H:%M")
+                                </py-script>
+                            </h4>
+                        </div>
+                    </div>
 
 
-                                        <label style="visibility:hidden">submit</label>
-                                        <a href="{{url_for('main.bill')}}">
-                                        <button type="submit" class="btn btn-primary btn-block">
-                                            <h4 class="lean-h">Checkout</h4>
-                                        </button></a>
-                                    </div>
-                               </div>
-						</div>
-					</div>
-				</div>
-			</div>
-
+                    <div class="col-md-6">
+                        <br>
+                        <div class="form-group">
+                            <h4 class="lean">
+                                Order before:
+                                <py-script class="lean-h">
+                                        import datetime
+                                        (datetime.datetime.now() + datetime.timedelta(minutes=30)).strftime("%H:%M")
+                                </py-script>
+                                to make sure your order does not get cancelled.
+                            </h4>
+                        </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
