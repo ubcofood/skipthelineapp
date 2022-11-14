@@ -5,6 +5,7 @@
 - Export menu pdf in Vendor Menu page with pdfkit library integration
    - Enables vendors to export their menus for promotional purposes
    - Note that this feature requires installation of both pdfkit and wkhtmltopdf packages before running the program, which can be done by running these commands:
+   
    ```
    pip install pdfkit
    brew install wkhtmltopdf // Mac with homebrew installed
@@ -29,6 +30,11 @@
 - Export analytic pdf in Vendor/Admin Analytic page with pdfkit library integration
   - Allow Vendor/Admin to download and export their sales data to print and organize right under the page.
   
+  - Sample Outputs:
+      - See screenshot or video for sample outputs
+ 
+- Integrated scripts that allows the order panel to refresh page every ten seconds
+  - Allow vendors to see new orders without the need of manually refresh the page, and the system will automatic show new order once customer has placed one.
   - Sample Outputs:
       - See screenshot or video for sample outputs
       
