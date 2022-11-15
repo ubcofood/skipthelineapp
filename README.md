@@ -2,7 +2,7 @@
 
 ## Updated features in Assignment 3 📝
 
-- Export menu pdf in Vendor Menu page with pdfkit library integration
+- Export menu pdf in Vendor Menu page with **pdfkit library** integration
    - Enables vendors to export their menus for promotional purposes
    - Note that this feature requires installation of both pdfkit and wkhtmltopdf packages before running the program, which can be done by running these commands:
    
@@ -15,7 +15,7 @@
    - Sample Outputs:
       - See `analytic.pdf` file in the `sampleoutputs` folder
    
-- Time display on Vendor order page using pytime library
+- Time display on Vendor order page using **pytime library**
   - Allow vendor to view the current time and order times from customers which helps them to prioritize orders based on their time.
   
   - Sample Outputs:
@@ -46,7 +46,7 @@
       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.15.54%20PM.png?raw=true)
       
   
-- Firebase Integration - Pyrebase library 
+- Firebase Integration - **Pyrebase library**
   - Allow user to login to the system with pre-registered accounts, firebase allows quick configuration that enable us to register accounts through the portal and manage their data. In Firebase, we store all the information and images needed to run this application. 
   - To install needed libraries run:
    ```
@@ -60,7 +60,7 @@
       - Firebase NoSQL database (example showing how food items are stored with unique keys)
        ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasedb.png?raw=true)
   
-- Email receipts - ssl and smtp libraries (come preinstalled with python)
+- Email receipts - **ssl and smtp libraries** (come preinstalled with python)
   - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
   - Sample Outputs:
        ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/emailreceipt.png?raw=true)
