@@ -35,6 +35,12 @@
 					
 				</div>
 			</div>
+			{% if us %}
+			<div class="alert alert-danger">
+				<h2>{{us}}</h2>
+			</div>
+			{% endif %}
+			<form class="form-group" action="/logincustomer" method="post">
             <div class="row t20">
 				<div class="col-lg-4 col-lg-offset-4">
 					<div class="panel panel-default">
@@ -55,13 +61,13 @@
 								   <div class="col-lg-12">
 									
 										<br>
-										  <input type="text" class="form-control" id="food-name" name="food-name" placeholder="UBC email" autofocus>
+										  <input type="text" class="form-control" id="food-name" name="email" placeholder="UBC email" autofocus>
 									
 									</div>
 									<div class="col-lg-12">
 									
 										<br>
-										  <input type="password" class="form-control" id="food-name" name="food-name" placeholder="Password" autofocus>
+										  <input type="password" class="form-control" id="food-name" name="pass" placeholder="Password" autofocus>
 									
 									</div>
                                
@@ -81,6 +87,7 @@
 					</div>
 				</div>
 			</div>
+			</form>
 			<!--
 			<div class="row t20">
 				<div class="col-lg-4 col-lg-offset-4">
