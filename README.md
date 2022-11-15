@@ -60,7 +60,7 @@
       - Firebase NoSQL database (example showing how food items are stored with unique keys)
        ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasedb.png?raw=true)
   
-- Email receipts
+- Email receipts - ssl and smtp libraries (come preinstalled with python)
   - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
   - Sample Outputs:
        ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/emailreceipt.png?raw=true)
