@@ -58,7 +58,7 @@
       - Storage of media files in Firebase
        ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasestorage.png?raw=true)
       - Firebase NoSQL database (example showing how food items are stored with unique keys)
-       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasesdb.png?raw=true)
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasedb.png?raw=true)
   
 - Email receipts
   - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
