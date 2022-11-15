@@ -63,7 +63,7 @@
 - Email receipts
   - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/emailreceipt.png?raw=true)
 
 
 
