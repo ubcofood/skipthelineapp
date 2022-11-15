@@ -46,11 +46,19 @@
       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.15.54%20PM.png?raw=true)
       
   
-- Firebase Integration
-  - Allow user to login to the system with pre-registered accounts, firebase allows quick configuration that enable us to register accounts through the portal and manage their data.
+- Firebase Integration - Pyrebase library 
+  - Allow user to login to the system with pre-registered accounts, firebase allows quick configuration that enable us to register accounts through the portal and manage their data. In Firebase, we store all the information and images needed to run this application. 
+  - To install needed libraries run:
+   ```
+   pip install pyrebase
+   ```
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      - Registered accounts in Firebase
        ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebaseauth.png?raw=true)
+      - Storage of media files in Firebase
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasestorage.png?raw=true)
+      - Firebase NoSQL database (example showing how food items are stored with unique keys)
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasesdb.png?raw=true)
   
 - Email receipts
   - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
