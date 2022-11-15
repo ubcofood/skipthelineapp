@@ -21,8 +21,19 @@ db = firebase.database()
 
 main = Blueprint('main',__name__)
 
-@main.route('/')
+@main.route('/', methods=['GET', 'POST']) #firebase
 def index():
+    uid='testcustomer'
+    if request.method == 'POST' and request.form['submit'] == 'tuna':
+        foodinfo = db.child("food").get().val()
+        for val in foodinfo:
+            if db.child("food").child(val).get().val()['foodName']=='Tuna roll':
+               db.child("carts").child(uid).push(val)
+    elif request.method == 'POST' and request.form['submit'] == 'blt':
+        foodinfo = db.child("food").get().val()
+        for val in foodinfo:
+            if db.child("food").child(val).get().val()['foodName']=='BLT sandwich':
+               db.child("carts").child(uid).push(val)
     return render_template('index.html')
 
 @main.route('/add')
@@ -46,7 +57,7 @@ def logincustomer():
         password = request.form['pass']
         try:
             auth.sign_in_with_email_and_password(email, password)
-            return render_template('index.html', s=successful)
+            return redirect(url_for('main.index'))
         except:
             return render_template('login_customer.html', us=unsuccessful)
     return render_template('login_customer.html')
@@ -60,7 +71,7 @@ def loginvendor():
         password = request.form['pass']
         try:
             auth.sign_in_with_email_and_password(email, password)
-            return render_template('orderlist.html', s=successful)
+            return redirect(url_for('main.orderlist'))
         except:
             return render_template('login_vendor.html', us=unsuccessful)
 
@@ -75,7 +86,7 @@ def loginadmin():
         password = request.form['pass']
         try:
             auth.sign_in_with_email_and_password(email, password)
-            return render_template('adminView.html', s=successful)
+            return redirect(url_for('main.adminview'))
         except:
             return render_template('login_admin.html', us=unsuccessful)
 

@@ -89,13 +89,14 @@
 			</div>
 
 			<div class="row t20">
+				<form class="form-group" action="/" method="post">
 				<div class="col-lg-3">
 					<div class="panel panel-warning">
 						<div class="panel-body text-bold">
 							<!--<i class="glyphicon glyphicon-calendar"></i> -->Tuna roll
-							<a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" >
+							<button class="btn btn-primary btn-xs pull-right" value="tuna" name="submit" type="submit" data-toggle="modal" data-target="#myModal" >
 								Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
-							</a>
+							</button>
 						</div>
 						<div class="text-center">
 							<a data-toggle="modal" data-target="#TunaRollModal">
@@ -112,16 +113,16 @@
 						</ul>
 					</div>
 				</div>
-
-				
+			</form>
+			<form class="form-group" action="/" method="post">
 					<div class="col-lg-3">
 						<div class="panel panel-warning">
 							<div class="panel-body text-bold">
 								<!--<i class="glyphicon glyphicon-calendar"></i> -->BLT sandwich
 	
-								<a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right">
+								<button value="blt" name="submit" type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right">
 									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
-								</a>
+								</button>
 							</div>
 							<div class="text-center">
 								<a data-toggle="modal" data-target="#BltModal">
@@ -138,6 +139,7 @@
 							</ul>
 						</div>
 					</div>
+				</form>
 
 					<div class="col-lg-3">
 						<div class="panel panel-warning">
