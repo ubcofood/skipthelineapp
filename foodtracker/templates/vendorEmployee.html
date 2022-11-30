@@ -11,6 +11,28 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="../static/bs/css/buttonstyle.css">
 
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1678638095724206', // REPLACE IF YOU WANT TO USE YOUR OWN FB APP
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.11'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 
 </head>
 <body class="body">
@@ -34,10 +56,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/vendor_analytics">Analytics</a>
                 </li>
-				<li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="/vendor_menu">Menu</a>
                 </li>
-				<li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="/login">Sign Out</a>
                 </li>
             </ul>
@@ -54,7 +76,8 @@
             <br>
             <h2>Employee Panel &#128084;</h2>
             <br>
-            <p> List of Employee will be displayed below. You can replace, edit, remove personals and manage their salaries. </p>
+            <p> List of Employee will be displayed below. You can replace, edit, remove personals and manage their
+                salaries. </p>
             <br>
             <h3>Koi Sushi's Employee List:</h3>
             <br>
@@ -63,8 +86,9 @@
         <div class="panel-default col-md-6">
             <h3>&#10024;Employee of the week &#10024;</h3>
             <img src="{{ url_for('static', filename='img/karen.png') }}" alt="..."
-                             width="150" height="150" class="img-rounded">
-            <p class="col-md-5">Our employee of the week is Karen! For the past months she has been dedicated, well-organised and helped our shop made the transistion to online food ordering.</p>
+                 width="150" height="150" class="img-rounded">
+            <p class="col-md-5">Our employee of the week is Karen! For the past months she has been dedicated,
+                well-organised and helped our shop made the transistion to online food ordering.</p>
 
         </div>
         <div class="table roundedCorners">
@@ -87,16 +111,17 @@
                         <h4>Karen White</h4>
                     </td>
                     <td>
-                        <h4>Cashier<h4> <h4>Manager</h4>
-                            <h5 class="text-bg-info  rounded-pill text-center col-md-4">Full Time</h5>
-                            <h5 class="text-bg-success rounded-pill text-center col-md-7">Skiptheline Admin</h5>
+                        <h4>Cashier
+                            <h4><h4>Manager</h4>
+                                <h5 class="text-bg-info  rounded-pill text-center col-md-4">Full Time</h5>
+                                <h5 class="text-bg-success rounded-pill text-center col-md-7">Skiptheline Admin</h5>
 
                     </td>
                     <td>
                         <a class="btn btn-primary btn-xs rounded-3" data-toggle="modal" data-target="#thewelleditmodal">
                             <i class="glyphicon glyphicon-pencil"></i> Edit Salary
                         </a>
-                        <a  class="btn btn-danger btn-xs rounded-3">
+                        <a class="btn btn-danger btn-xs rounded-3">
                             <i class="glyphicon glyphicon-trash"></i> Remove Employee
                         </a>
                     </td>
@@ -110,15 +135,16 @@
                         <h4>Rob Banks</h4>
                     </td>
                     <td>
-                        <h4>Chef<h4> <h4>Stock Manager</h4>
-                            <h5 class="text-bg-secondary col-lg-4 rounded-pill text-center col-md-3">Part Time</h5>
+                        <h4>Chef
+                            <h4><h4>Stock Manager</h4>
+                                <h5 class="text-bg-secondary col-lg-4 rounded-pill text-center col-md-3">Part Time</h5>
 
                     </td>
                     <td>
                         <a class="btn btn-primary btn-xs rounded-3" data-toggle="modal" data-target="#thewelleditmodal">
                             <i class="glyphicon glyphicon-pencil"></i> Edit Salary
                         </a>
-                        <a  class="btn btn-danger btn-xs rounded-3">
+                        <a class="btn btn-danger btn-xs rounded-3">
                             <i class="glyphicon glyphicon-trash"></i> Remove Employee
                         </a>
                     </td>
@@ -132,9 +158,10 @@
                         <h4>Ben Dover</h4>
                     </td>
                     <td>
-                        <h4>Chef<h4> <h4>Backup cashier</h4>
+                        <h4>Chef
+                            <h4><h4>Backup cashier</h4>
 
-                            <h5 class="text-bg-secondary col-lg-4 rounded-pill text-center col-md-3">Part Time</h5>
+                                <h5 class="text-bg-secondary col-lg-4 rounded-pill text-center col-md-3">Part Time</h5>
 
 
                     </td>
@@ -142,7 +169,7 @@
                         <a class="btn btn-primary btn-xs rounded-3" data-toggle="modal" data-target="#thewelleditmodal">
                             <i class="glyphicon glyphicon-pencil"></i> Edit Salary
                         </a>
-                        <a  class="btn btn-danger btn-xs rounded-3">
+                        <a class="btn btn-danger btn-xs rounded-3">
                             <i class="glyphicon glyphicon-trash"></i> Remove Employee
                         </a>
                     </td>
@@ -155,6 +182,44 @@
     <a href="#" class="float buttonstyle " data-toggle="modal" data-target="#thewelleditmodal">
         <i class="fa fa-plus my-float"></i>
     </a>
+
+    <div class="fb-customerchat"
+         page_id="111422508466922"
+         ref="<OPTIONAL_WEBHOOK_PARAM>"
+         minimized="<true>">
+    </div>
+
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "111422508466922");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v15.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 </main>
 
@@ -178,7 +243,7 @@
                                  width="300px" height="300px" class="img-rounded>
                         </div>
                         <br>
-                        <ul class="list-group">
+                        <ul class=" list-group">
                             <div class="d-grid gap-2">
                                 <label class="btn btn-light bg-light border-light" type="button" for="uploadbtn">
                                     <i class="glyphicon glyphicon-cloud-upload"></i> Update Logo
@@ -193,99 +258,100 @@
                                     and height of 200
                                     pixels. Must be in either jpg, jpeg, gif or png format</small>
                             </div>
-                        </ul>
+                            </ul>
 
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <ul class="list-group-item">
+                                <form>
+                                    <fieldset>
+                                        <legend>Edit details</legend>
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">Name</label>
+                                            <input type="text" class="form-control" placeholder="The Well">
+                                            <small id="emailHelp" class="form-text text-muted">Enter the name of your
+                                                restaurant here</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">Address</label>
+                                            <input type="text" class="form-control"
+                                                   placeholder="University Centre, 3272 University Way, Kelowna, BC V1V 1V7"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">UNC Room number</label>
+                                            <input type="text" class="form-control" placeholder="UNC125">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">Email</label>
+                                            <input type="text" class="form-control" placeholder="thewell@ubc.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">Phone number</label>
+                                            <input type="text" class="form-control" placeholder="123 456 7890">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">Employee size</label>
+                                            <select class="form-select" id="exampleSelect1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label mt-4">Descriptions</label>
+                                            <textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
+                                            <small class="form-text text-muted">Describe the category of your
+                                                restaurant,
+                                                including what you're selling and any specialities</small>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <!--right column-->
+                        </div>
                     </div>
-                    <div class="col-md-6 text-left">
-                        <ul class="list-group-item">
-                            <form>
-                                <fieldset>
-                                    <legend>Edit details</legend>
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">Name</label>
-                                        <input type="text" class="form-control" placeholder="The Well">
-                                        <small id="emailHelp" class="form-text text-muted">Enter the name of your
-                                            restaurant here</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">Address</label>
-                                        <input type="text" class="form-control"
-                                               placeholder="University Centre, 3272 University Way, Kelowna, BC V1V 1V7"></input>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">UNC Room number</label>
-                                        <input type="text" class="form-control" placeholder="UNC125">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">Email</label>
-                                        <input type="text" class="form-control" placeholder="thewell@ubc.com">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">Phone number</label>
-                                        <input type="text" class="form-control" placeholder="123 456 7890">
-                                    </div>
 
-
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">Employee size</label>
-                                        <select class="form-select" id="exampleSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label mt-4">Descriptions</label>
-                                        <textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
-                                        <small class="form-text text-muted">Describe the category of your restaurant,
-                                            including what you're selling and any specialities</small>
-                                    </div>
-                                </fieldset>
-                            </form>
-                            <!--right column-->
-                    </div>
                 </div>
-
+                <div class="modal-footer">
+                    <button data-toggle="modal" data-target="#editsuccess" type="button" data-dismiss="modal"
+                            class="btn btn-primary bg-primary border-primary">Submit
+                    </button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button data-toggle="modal" data-target="#editsuccess" type="button" data-dismiss="modal"
-                        class="btn btn-primary bg-primary border-primary">Submit
-                </button>
+        </div>
+    </div>
+
+    <!-- Edit Success Prompt -->
+    <div class="modal fade" id="editsuccess" role="dialog">
+        <div class="modal-dialog">
+            <div class="alert alert-dismissible alert-success">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Success!</strong> <strong>The well</strong> has been updated.
             </div>
         </div>
     </div>
-</div>
 
-<!-- Edit Success Prompt -->
-<div class="modal fade" id="editsuccess" role="dialog">
-    <div class="modal-dialog">
-        <div class="alert alert-dismissible alert-success">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            <strong>Success!</strong> <strong>The well</strong> has been updated.
+    <footer>
+        <div class="row pad">
+            <div class="col-lg-12 text-center">
+                Copyright &copy; 2022 <strong>UBC SUO: Skip the line</strong>
+            </div>
         </div>
-    </div>
-</div>
+    </footer>
 
-<footer>
-    <div class="row pad">
-        <div class="col-lg-12 text-center">
-            Copyright &copy; 2022 <strong>UBC SUO: Skip the line</strong>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="{{ url_for('static', filename='/bs/js/jquery.min.js') }}"></script>
-<!-- Bootstrap JavaScript -->
-<script src="{{ url_for('static', filename='/bs/js/bootstrap.min.js') }}"></script>
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='/bs/js/jquery.min.js') }}"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="{{ url_for('static', filename='/bs/js/bootstrap.min.js') }}"></script>
 
 </body>
 </html>
