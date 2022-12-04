@@ -1,5 +1,29 @@
 # Skipthelineapp 
 
+## Updated features in Individual Project 📝
+
+### Paypal Integration and Admin Troubleshoot Page - Nick
+
+- Added Paypal checkout integration on the Cart page, allowing current payment to send directly to merchant's account.
+  - Customer can have the option to pay using paypal credit alongside with their credit/debit card. 
+  - On the cart page, there are two buttons for payments. Clicking the pay with paypal button will direct user to the paypal authentication page. Once the transaction is completed, the page will direct user to the bill page.
+  
+  <img width="306" alt="Screenshot 2022-12-04 at 1 09 43 AM" src="https://user-images.githubusercontent.com/88886207/205482762-14a2b195-18de-4c79-aa0f-131dafcc507b.png">
+  
+- Added Troubleshoot Chat page under the admin portal, allowing admin manager to get help remotely by chatting with us.
+  - Admin now has the ability to contact us to troubleshoot technical issues.
+  - The admin help page comprises a conversation view and a message toolbar. Admins can click our profile and directly chat with us through weavy. The conversation will not disappear if user clicked other pages after.
+  
+  <img width="937" alt="Screenshot 2022-12-04 at 1 11 49 AM" src="https://user-images.githubusercontent.com/88886207/205482909-86140506-e75b-47e0-8675-4c080abc8d14.png">
+  
+   #### API used:
+
+
+   - Weavy Chat API using JavaScript Library
+   - Paypal payment REST API
+
+
+
 ## Updated features in Assignment 3 📝
 
 - Export menu pdf in Vendor Menu page with **pdfkit library** integration
