@@ -134,3 +134,7 @@ def vendor_analytics():
 @main.route('/vendorEmployee')
 def vendorEmployee():
     return render_template('vendorEmployee.html')
+
+@main.route('/adminhelp')
+def adminhelp():
+    return render_template('adminhelp.html')

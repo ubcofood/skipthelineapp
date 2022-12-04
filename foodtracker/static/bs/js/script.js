@@ -202,3 +202,4 @@ function drawCharts() {
   var pieChart = new google.visualization.PieChart(document.getElementById('pie-chart'));
   pieChart.draw(pieData, pieOptions);
 }
+
