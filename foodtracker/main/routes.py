@@ -1,4 +1,6 @@
 from flask import *
+from flask_googlemaps import GoogleMaps
+from flask_googlemaps import Map
 import pyrebase
 
 config = {
@@ -20,6 +22,9 @@ storage = firebase.storage()
 db = firebase.database()
 
 main = Blueprint('main',__name__)
+
+app = Flask(__name__, template_folder=".")
+GoogleMaps(app)
 
 @main.route('/', methods=['GET', 'POST']) #firebase
 def index():
@@ -117,6 +122,8 @@ def checkout_card():
 
 @main.route('/bill')
 def bill():
+
+    
     return render_template('bill.html')
 
 @main.route('/orderlist')
