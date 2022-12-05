@@ -23,7 +23,7 @@
    - Paypal payment REST API
 
 
-### Text and phone call confirmation of the Order - Anirudh
+### Text and phone call confirmations of the Order - Anirudh
 
 - Added text message verification on chechout using the Twilio SMS API
   - Customers will recieve a text messagestating their order number and verifiying that it has been confirmed.
