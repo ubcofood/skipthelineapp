@@ -2,139 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-	<link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
-		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/united.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body>
 
-	<div class="container-fluid" id="wrapper">
-			
-		<div class="row" id="homeJumbo">
-			<div class="overlay"></div>
-			<div class="col-lg-12">
-				<h1>
-					<a href="{{url_for('main.index')}}">Your Cart</a>
-				</h1>
-				
-				<div class="row t20">
-					<div class="col-lg-4 col-lg-offset-4">
-						<ul class="nav nav-pills nav-justified" >
-						  <li role="presentation" >
-							  <a href="{{url_for('main.index')}}" title="Home">Home</a>
-						  </li>
-		
-						
-						  <li role="presentation" class="active" >
-							<a href="{{url_for('main.cart')}}" title="Add Food Item"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-						</li>
-						<li role="presentation" >
-							<a href="{{url_for('main.login')}}" title="Log out">Log out</a>
-						</li>
-						</ul>
-				
-					</div>
+<div class="container-fluid" id="wrapper">
 
-					
-				</div>
-			</div>
-		</div>
+    <div class="row" id="homeJumbo">
+        <div class="overlay"></div>
+        <div class="col-lg-12">
+            <h1>
+                <a href="{{ url_for('main.index') }}">Your Cart</a>
+            </h1>
 
-			<div class="row t20">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="panel panel-default">
-						<div class="table-responsive">
-							<table class="table table-striped table-hover table-bordered">
-								<thead>
-									<tr>
-										<th style="width: 5%;">Item</th>
-										<th>Item Name</th>
-										<th style="width: 10%;">Quantity</th>
-										<th style="width: 10%;">Cost</th>
-										<th style="width: 20%;">Actions</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<!--Image-->
-											<div class="panel-body text-bold">
-							<img src="{{url_for('static', filename='img/sushi_tuna_roll.jpg')}}" alt="Responsive image" class="img-fluid">
-					  </div>
-
-										</td><td>Tuna Roll</td>
-										<td>1</td>
-										<td>$14.39</td>
-										<td>
-											<a href="#" class="btn btn-danger btn-xs">
-												<i class="glyphicon glyphicon-trash"></i> Delete
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="panel-body text-bold">
-							<img src="{{url_for('static', filename='img/well_blt.jpeg')}}" alt="Responsive image" class="img-fluid">
-					  </div>
-										</td><td>BLT Sandwich</td>
-										<td>1</td>
-										<td>11.99</td>
-										<td>
-											</a>
-											<a href="#" class="btn btn-danger btn-xs">
-												<i class="glyphicon glyphicon-trash"></i> Delete
-											</a>
-										</td>
-									</tr>
-
-									<tr>
-										<td>
-										<p class = "h2"><b><center>Total </center></b></p>
-										</td><td></td></td>
-											<td></td>
-										<td>
-									<b>$ 26.38</b> </td>
+            <div class="row t20">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <ul class="nav nav-pills nav-justified">
+                        <li role="presentation">
+                            <a href="{{ url_for('main.index') }}" title="Home">Home</a>
+                        </li>
 
 
-									<td>
-											</a>
-		  <button style="background-color:#000080" class="btn btn-primary btn-block">
-			  	  <a href="{{url_for('main.checkout_cwl')}}" title="checkout">
-					  <p style="color:white">Pay with UBC Card</p></button>
-											</a>
-										<br>
-										
-										<a href="#">
-		  <button type="button" style="background-color:#008000;" class= "btn btn-primary btn-block">
-			  <a href="{{url_for('main.checkout_card')}}" title="checkout"> <p style="color:white">Pay with Credit Card</p></a>
-                  </button>
-										</a>
-										</td>
+                        <li role="presentation" class="active">
+                            <a href="{{ url_for('main.cart') }}" title="Add Food Item"><i
+                                    class="glyphicon glyphicon-shopping-cart"></i></a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{{ url_for('main.login') }}" title="Log out">Log out</a>
+                        </li>
+                    </ul>
+
+                </div>
 
 
-							</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- jQuery -->
-		<script src="{{url_for('static', filename='/bs/js/jquery.min.js')}}"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="{{url_for('static', filename='/bs/js/bootstrap.min.js')}}"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="row t20">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="panel panel-default">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th style="width: 5%;">Item</th>
+                            <th>Item Name</th>
+                            <th style="width: 10%;">Quantity</th>
+                            <th style="width: 10%;">Cost</th>
+                            <th style="width: 20%;">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <!--Image-->
+                                <div class="panel-body text-bold">
+                                    <img src="{{ url_for('static', filename='img/sushi_tuna_roll.jpg') }}"
+                                         alt="Responsive image" class="img-fluid">
+                                </div>
+
+                            </td>
+                            <td>Tuna Roll</td>
+                            <td>1</td>
+                            <td>$14.39</td>
+                            <td>
+                                <a href="#" class="btn btn-danger btn-xs">
+                                    <i class="glyphicon glyphicon-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="panel-body text-bold">
+                                    <img src="{{ url_for('static', filename='img/well_blt.jpeg') }}"
+                                         alt="Responsive image" class="img-fluid">
+                                </div>
+                            </td>
+                            <td>BLT Sandwich</td>
+                            <td>1</td>
+                            <td>11.99</td>
+                            <td>
+                                <a href="#" class="btn btn-danger btn-xs">
+                                    <i class="glyphicon glyphicon-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p class="h2"><b>
+                                    <center>Total</center>
+                                </b></p>
+                            </td>
+                            <td></td>
+                            </td>
+                            <td></td>
+                            <td>
+                                <b>$ 26.38</b></td>
+
+
+                            <td>
+                                </a>
+                                <button style="background-color:#000080" class="btn btn-block">
+                                    <a href="{{ url_for('main.checkout_cwl') }}" title="checkout">
+                                        <p style="color:white">Pay with UBC Card</p>
+                                    </a>
+                                </button>
+                                </a>
+
+                                <br>
+
+                                <a href="#">
+                                    <!-- Replace "test" with your own sandbox Business account app client ID -->
+                                    <script src="https://www.paypal.com/sdk/js?client-id=AUAhVIuGp7StB_rhF5j3juWNNy9eS7E2re_8M-lEWGasbKSu9RAHhUk15wGV1k2YM4AKwolwWhktI8T_&currency=CAD"></script>
+                                    <!-- Set up a container element for the button -->
+                                    <div id="paypal-button-container"></div>
+                                    <script>
+                                        paypal.Buttons({
+                                            // Sets up the transaction when a payment button is clicked
+                                            createOrder: (data, actions) => {
+                                                return actions.order.create({
+                                                    purchase_units: [{
+                                                        amount: {
+                                                            value: '26.38' // Can also reference a variable or function
+                                                        }
+                                                    }]
+                                                });
+                                            },
+                                            // Finalize the transaction after payer approval
+                                            onApprove: (data, actions) => {
+                                                return actions.order.capture().then(function (orderData) {
+                                                    // Successful capture! For dev/demo purposes:
+                                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                    const transaction = orderData.purchase_units[0].payments.captures[0];
+                                                    alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                                                    // When ready to go live, remove the alert and show a success message within this page. For example:
+                                                    const element = document.getElementById('paypal-button-container');
+                                                	element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                    location.replace("/bill");
+                                                });
+                                            }
+                                        }).render('#paypal-button-container');
+                                    </script>
+                                </a>
+                                <br>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='/bs/js/jquery.min.js') }}"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="{{ url_for('static', filename='/bs/js/bootstrap.min.js') }}"></script>
+</div>
 
 </body>
 </html>
+

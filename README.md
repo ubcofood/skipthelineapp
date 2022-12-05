@@ -1,8 +1,32 @@
 # Skipthelineapp 
 
+## Updated features in Individual Project 📝
+
+### Paypal Integration and Admin Troubleshoot Page - Nick
+
+- Added Paypal checkout integration on the Cart page, allowing current payment to send directly to merchant's account.
+  - Customer can have the option to pay using paypal credit alongside with their credit/debit card. 
+  - On the cart page, there are two buttons for payments. Clicking the pay with paypal button will direct user to the paypal authentication page. Once the transaction is completed, the page will direct user to the bill page.
+  
+  <img width="306" alt="Screenshot 2022-12-04 at 1 09 43 AM" src="https://user-images.githubusercontent.com/88886207/205482762-14a2b195-18de-4c79-aa0f-131dafcc507b.png">
+  
+- Added Troubleshoot Chat page under the admin portal, allowing admin manager to get help remotely by chatting with us.
+  - Admin now has the ability to contact us to troubleshoot technical issues.
+  - The admin help page comprises a conversation view and a message toolbar. Admins can click our profile and directly chat with us through weavy. The conversation will not disappear if user clicked other pages after.
+  
+  <img width="937" alt="Screenshot 2022-12-04 at 1 11 49 AM" src="https://user-images.githubusercontent.com/88886207/205482909-86140506-e75b-47e0-8675-4c080abc8d14.png">
+  
+   #### API used:
+
+
+   - Weavy Chat API using JavaScript Library
+   - Paypal payment REST API
+
+
+
 ## Updated features in Assignment 3 📝
 
-- Export menu pdf in Vendor Menu page with pdfkit library integration
+- Export menu pdf in Vendor Menu page with **pdfkit library** integration
    - Enables vendors to export their menus for promotional purposes
    - Note that this feature requires installation of both pdfkit and wkhtmltopdf packages before running the program, which can be done by running these commands:
    
@@ -15,7 +39,7 @@
    - Sample Outputs:
       - See `analytic.pdf` file in the `sampleoutputs` folder
    
-- Time display on Vendor order page using pytime library
+- Time display on Vendor order page using **pytime library**
   - Allow vendor to view the current time and order times from customers which helps them to prioritize orders based on their time.
   
   - Sample Outputs:
@@ -46,15 +70,24 @@
       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/Screenshot%202022-11-14%20at%202.15.54%20PM.png?raw=true)
       
   
-- Firebase Integration
-  - Allow user to login to the system with pre-registered accounts, firebase allows quick configuration that enable us to register accounts through the portal and manage their data.
+- Firebase Integration - **Pyrebase library**
+  - Allow user to login to the system with pre-registered accounts, firebase allows quick configuration that enable us to register accounts through the portal and manage their data. In Firebase, we store all the information and images needed to run this application. 
+  - To install needed libraries run:
+   ```
+   pip install pyrebase
+   ```
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+      - Registered accounts in Firebase
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebaseauth.png?raw=true)
+      - Storage of media files in Firebase
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasestorage.png?raw=true)
+      - Firebase NoSQL database (example showing how food items are stored with unique keys)
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/firebasedb.png?raw=true)
   
-- Email receipts
+- Email receipts - **ssl and smtp libraries** (come preinstalled with python)
   - When an order is completed, the system will generate an email receipt that sends to user's email they registrated with. This allow user to view their email receipts without having to saving the entire page.
   - Sample Outputs:
-      - See screenshot or video for sample outputs
+       ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/emailreceipt.png?raw=true)
 
 
 

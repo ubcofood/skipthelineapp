@@ -1,370 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Skip the line | Home</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skip the line | Home</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
-		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/united.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body>
 
-			<div class="container-fluid" id="wrapper">
-				<!--{% if s %}
-				<div class="alert alert-success">
-					<h2>{{s}}</h2>
-				</div>
-				{% endif %}-->
-				
-				<div class="row" id="homeJumbo">
-					<div class="overlay"></div>
-					<div class="col-lg-12">
-						<h1>
-							<a href="{{url_for('main.index')}}">UBC SUO: Skip the line</a>
-						</h1>
-						
-						<div class="row t20">
-							<div class="col-lg-4 col-lg-offset-4">
-								<ul class="nav nav-pills nav-justified" >
-								<li role="presentation" class="active">
-									<a href="{{url_for('main.index')}}" title="Home">Home</a>
-								</li>
-				
-								
-								<li role="presentation" >
-									<a href="{{url_for('main.cart')}}" title="Add Food Item"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-								</li>
-								<li role="presentation" >
-									<a href="{{url_for('main.login')}}" title="Log out">Log out</a>
-								</li>
-								</ul>
-						
-							</div>
+</head>
+<body>
 
-							
-						</div>
-					</div>
-				</div>
-			<!--
-			<div class="row t20">
-				<div class="col-lg-4 col-lg-offset-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<form action="" method="POST" role="form">
-							
-								<div class="form-group">
-									<label><i class="glyphicon glyphicon-plus-sign"></i> Add New Date</label>
-									<div class="input-group">
-									  <input type="date" class="form-control" placeholder="Select New Date" aria-label="date" aria-describedby="add-btn">
-									  <span class="input-group-btn">
-										<button type="submit" class="btn btn-primary" id="add-btn">
-										  <i class="glyphicon glyphicon-plus-sign"></i> Add Date
-										</button>
-									  </span>
-									</div>
-								</div>
-							
-							</form>	
-						</div>
-					</div>
-				</div>
-			</div>-->
+<div class="container-fluid" id="wrapper">
 
-			<div class="row t20">
-				<div class="col-lg-12">
-					<h4 class="text-center text-white"><strong>Recommended for you</strong></h4>
-				</div>
-			</div>
+    <div class="row" id="homeJumbo">
+        <div class="overlay"></div>
+        <div class="col-lg-12">
+            <h1>
+                <a href="{{ url_for('main.index') }}">UBC SUO: Skip the line</a>
+            </h1>
 
-			<div class="row t20">
-				<form class="form-group" action="/" method="post">
-				<div class="col-lg-3">
-					<div class="panel panel-warning">
-						<div class="panel-body text-bold">
-							<!--<i class="glyphicon glyphicon-calendar"></i> -->Tuna roll
-							<button class="btn btn-primary btn-xs pull-right" value="tuna" name="submit" type="submit" data-toggle="modal" data-target="#myModal" >
-								Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
-							</button>
-						</div>
-						<div class="text-center">
-							<a data-toggle="modal" data-target="#TunaRollModal">
-								<img src="{{url_for('static', filename='img/sushi_tuna_roll.jpg')}}" alt="..." class="img-thumbnail">
-							</a>
-							
-						</div>
-						<br>
-						<ul class="list-group">
-							<li class="list-group-item text-bold"><span class="badge badge-sushi ">Koi Suhsi</span> Restaurant </li>
-							<li class="list-group-item text-bold"><span class="badge ">$14.39</span> Price </li>
-							<li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span> 
-								<span class="badge badge-shellfish">Shellfish</span> <span class="badge badge-animal">Animal Products</span> Allergens </li>
-						</ul>
-					</div>
-				</div>
-			</form>
-			<form class="form-group" action="/" method="post">
-					<div class="col-lg-3">
-						<div class="panel panel-warning">
-							<div class="panel-body text-bold">
-								<!--<i class="glyphicon glyphicon-calendar"></i> -->BLT sandwich
-	
-								<button value="blt" name="submit" type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right">
-									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
-								</button>
-							</div>
-							<div class="text-center">
-								<a data-toggle="modal" data-target="#BltModal">
-									<img src="{{url_for('static', filename='img/well_blt.jpeg')}}" alt="..." class="img-thumbnail">
-								</a>
-								
-							</div>
-							<br>
-							<ul class="list-group">
-								<li class="list-group-item text-bold"><span class="badge badge-well ">The Well</span> Restaurant </li>
-								<li class="list-group-item text-bold"><span class="badge ">$11.99</span> Price </li>
-								<li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span> 
-									 <span class="badge badge-animal">Animal Products</span> <span class="badge badge-lactose">Lactose</span>Allergens </li>
-							</ul>
-						</div>
-					</div>
-				</form>
+            <div class="row t20">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <ul class="nav nav-pills nav-justified">
+                        <li role="presentation" class="active">
+                            <a href="{{ url_for('main.index') }}" title="Home">Home</a>
+                        </li>
 
-					<div class="col-lg-3">
-						<div class="panel panel-warning">
-							<div class="panel-body text-bold">
-								<!--<i class="glyphicon glyphicon-calendar"></i> -->Butter Chicken
-	
-								<a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" >
-									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
-								</a>
-							</div>
-							<div class="text-center">
-								<a href="{{url_for('main.view')}}">
-									<img src="{{url_for('static', filename='img/fusion_butter_chicken.jpg')}}" alt="..." class="img-thumbnail">
-								</a>
-								
-							</div>
-							<br>
-							<ul class="list-group">
-								<li class="list-group-item text-bold"><span class="badge badge-fusion ">Fusion</span> Restaurant </li>
-								<li class="list-group-item text-bold"><span class="badge ">$9.99</span> Price </li>
-								<li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span> 
-									 <span class="badge badge-animal">Animal Products</span>Allergens </li>
-							</ul>
-						</div>
-					</div>
-				
-					<div class="col-lg-3">
-						<div class="panel panel-warning">
-							<div class="panel-body text-bold">
-								<!--<i class="glyphicon glyphicon-calendar"></i> -->Mango Smoothie
-	
-								<a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" ">
-									Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
-								</a>
-							</div>
-							<div class="text-center">
-								<a href="{{url_for('main.view')}}">
-									<img src="{{url_for('static', filename='img/comma_smoothie.jpg')}}" alt="..." class="img-thumbnail">
-								</a>
-								
-							</div>
-							<br>
-							<ul class="list-group">
-								<li class="list-group-item text-bold"><span class="badge badge-comma ">Comma</span> Restaurant </li>
-								<li class="list-group-item text-bold"><span class="badge ">$5.50</span> Price </li>
-								<li class="list-group-item text-bold"> 
-									 <span class="badge badge-lactose">Lactose</span>Allergens </li>
-							</ul>
-						</div>
-					</div>
-				
-				
-			</div>
 
-			<footer>
-				<div class="row pad">
-					<div class="col-lg-12 text-center">
-						Copyright &copy; 2022 <strong>UBC SUO: Skip the line</strong>
-					</div>
-				</div>
-			</footer>
+                        <li role="presentation">
+                            <a href="{{ url_for('main.cart') }}" title="Add Food Item"><i
+                                    class="glyphicon glyphicon-shopping-cart"></i></a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{{ url_for('main.login') }}" title="Log out">Log out</a>
+                        </li>
+                    </ul>
 
-		</div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row t20">
+        <div class="col-lg-12">
+            <h4 class="text-center text-white"><strong>Recommended for you</strong></h4>
+        </div>
+    </div>
+
+    <div class="row t20">
+        <form class="form-group" action="/" method="post">
+            <div class="col-lg-3">
+                <div class="panel panel-warning">
+                    <div class="panel-body text-bold">
+                        <!--<i class="glyphicon glyphicon-calendar"></i> -->Tuna roll
+                        <button class="btn btn-primary btn-xs pull-right" value="tuna" name="submit" type="submit"
+                                data-toggle="modal" data-target="#myModal">
+                            Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <a data-toggle="modal" data-target="#TunaRollModal">
+                            <img src="{{ url_for('static', filename='img/sushi_tuna_roll.jpg') }}" alt="..."
+                                 class="img-thumbnail">
+                        </a>
+
+                    </div>
+                    <br>
+                    <ul class="list-group">
+                        <li class="list-group-item text-bold"><span class="badge badge-sushi ">Koi Suhsi</span>
+                            Restaurant
+                        </li>
+                        <li class="list-group-item text-bold"><span class="badge ">$14.39</span> Price</li>
+                        <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
+                            <span class="badge badge-shellfish">Shellfish</span> <span class="badge badge-animal">Animal Products</span>
+                            Allergens
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+        <form class="form-group" action="/" method="post">
+            <div class="col-lg-3">
+                <div class="panel panel-warning">
+                    <div class="panel-body text-bold">
+                        <!--<i class="glyphicon glyphicon-calendar"></i> -->BLT sandwich
+
+                        <button value="blt" name="submit" type="submit" data-toggle="modal" data-target="#myModal"
+                                class="btn btn-primary btn-xs pull-right">
+                            Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <a data-toggle="modal" data-target="#BltModal">
+                            <img src="{{ url_for('static', filename='img/well_blt.jpeg') }}" alt="..."
+                                 class="img-thumbnail">
+                        </a>
+
+                    </div>
+                    <br>
+                    <ul class="list-group">
+                        <li class="list-group-item text-bold"><span class="badge badge-well ">The Well</span> Restaurant
+                        </li>
+                        <li class="list-group-item text-bold"><span class="badge ">$11.99</span> Price</li>
+                        <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
+                            <span class="badge badge-animal">Animal Products</span> <span class="badge badge-lactose">Lactose</span>Allergens
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+
+        <div class="col-lg-3">
+            <div class="panel panel-warning">
+                <div class="panel-body text-bold">
+                    <!--<i class="glyphicon glyphicon-calendar"></i> -->Butter Chicken
+
+                    <a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal">
+                        Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('main.view') }}">
+                        <img src="{{ url_for('static', filename='img/fusion_butter_chicken.jpg') }}" alt="..."
+                             class="img-thumbnail">
+                    </a>
+
+                </div>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item text-bold"><span class="badge badge-fusion ">Fusion</span> Restaurant
+                    </li>
+                    <li class="list-group-item text-bold"><span class="badge ">$9.99</span> Price</li>
+                    <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
+                        <span class="badge badge-animal">Animal Products</span>Allergens
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="panel panel-warning">
+                <div class="panel-body text-bold">
+
+                    <a class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#myModal" ">
+                    Add to Cart <i class="glyphicon glyphicon-plus-sign"></i>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('main.view') }}">
+                        <img src="{{ url_for('static', filename='img/comma_smoothie.jpg') }}" alt="..."
+                             class="img-thumbnail">
+                    </a>
+
+                </div>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item text-bold"><span class="badge badge-comma ">Comma</span> Restaurant</li>
+                    <li class="list-group-item text-bold"><span class="badge ">$5.50</span> Price</li>
+                    <li class="list-group-item text-bold">
+                        <span class="badge badge-lactose">Lactose</span>Allergens
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row pad">
+            <div class="col-lg-12 text-center">
+                Copyright &copy; 2022 <strong>UBC SUO: Skip the line</strong>
+            </div>
+        </div>
+    </footer>
+</div>
 
 <!-- Modals -->
 <!--Sushi modal-->
-<div class="modal fade " id="TunaRollModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="exampleModalLabel">Tuna Roll</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-			<div class="row">
-				<div class="col-md-6 text-center">
-				  <!--left column-->
-				  <div class="panel-body text-bold">
-						<img src="{{url_for('static', filename='img/sushi_tuna_roll.jpg')}}" alt="..." class="img-thumbnail">
-				  </div>
-				  <br>
-				  <ul class="list-group">
+<div class="modal fade " id="TunaRollModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Tuna Roll</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!--left column-->
+                        <div class="panel-body text-bold">
+                            <img src="{{ url_for('static', filename='img/sushi_tuna_roll.jpg') }}" alt="..."
+                                 class="img-thumbnail">
+                        </div>
+                        <br>
+                        <ul class="list-group">
 
-					<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-						<div class="d-flex w-100 justify-content-between">
-						  <h4 class="mb-1">Ingredients</h4>
-						  <!--<small>3 days ago</small>-->
-						</div>
-						<p class="mb-1">
-							Dry seaweed, sashimi-grade tuna, mayonnaise,green onions, hot chile sauce, sushi rice
-							, sesame seeds.</p>
-						<!--<small>Donec id elit non mi porta.</small>-->
-					  </a>
-					  <br>
-					<li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span> 
-					<span class="badge badge-shellfish">Shellfish</span> <span class="badge badge-animal">Animal Products</span> Allergens </li>
-				  </ul>
-				  
-				</div>
-				<div class="col-md-6 text-center">
-					<ul class="list-group">
+                            <a href="#"
+                               class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1">Ingredients</h4>
+                                    <!--<small>3 days ago</small>-->
+                                </div>
+                                <p class="mb-1">
+                                    Dry seaweed, sashimi-grade tuna, mayonnaise,green onions, hot chile sauce, sushi
+                                    rice
+                                    , sesame seeds.</p>
+                                <!--<small>Donec id elit non mi porta.</small>-->
+                            </a>
+                            <br>
+                            <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
+                                <span class="badge badge-shellfish">Shellfish</span> <span class="badge badge-animal">Animal Products</span>
+                                Allergens
+                            </li>
+                        </ul>
 
-						<div class="panel-body text-bold">
-							<img src="{{url_for('static', filename='img/sushi_logo.png')}}" alt="..." class="img-thumbnail">
-					  </div>
-						
-						  <br>
-						  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-							<div class="d-flex w-100 justify-content-between bg-light">
-							  <h4 class="mb-1">Price</h4>
-							  <!--<small>3 days ago</small>-->
-							</div>
-							<p class="mb-1">
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <ul class="list-group">
 
-								$14.39</p>
-							<!--<small>Donec id elit non mi porta.</small>-->
-						  </a>
-						  <br>
-						  <br>	
-						  <input type="number" class="form-control" id="input1" placeholder="Enter quantity">
-					  </ul>
-				  <!--right column-->
-				</div>
-			  </div>
-			
-		</div>
-		<div class="modal-footer">
+                            <div class="panel-body text-bold">
+                                <img src="{{ url_for('static', filename='img/sushi_logo.png') }}" alt="..."
+                                     class="img-thumbnail">
+                            </div>
 
+                            <br>
+                            <a href="#"
+                               class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between bg-light">
+                                    <h4 class="mb-1">Price</h4>
+                                    <!--<small>3 days ago</small>-->
+                                </div>
+                                <p class="mb-1">
 
+                                    $14.39</p>
+                                <!--<small>Donec id elit non mi porta.</small>-->
+                            </a>
+                            <br>
+                            <br>
+                            <input type="number" class="form-control" id="input1" placeholder="Enter quantity">
+                        </ul>
+                        <!--right column-->
+                    </div>
+                </div>
 
-		  <button data-toggle="modal" data-target="#myModal"  type="button" data-dismiss="modal" class="btn btn-primary">Add to cart</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-
-  <!--Well modal-->
-<div class="modal fade " id="BltModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="exampleModalLabel">Blt Sandwich</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-			<div class="row">
-				<div class="col-md-6 text-center">
-				  <!--left column-->
-				  <div class="panel-body text-bold">
-						<img src="{{url_for('static', filename='img/well_blt.jpeg')}}" alt="..." class="img-thumbnail">
-				  </div>
-				  <br>
-				  <ul class="list-group">
-
-					<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-						<div class="d-flex w-100 justify-content-between">
-						  <h4 class="mb-1">Ingredients</h4>
-						  <!--<small>3 days ago</small>-->
-						</div>
-						<p class="mb-1">
-							Bacon 
-							,slices white bread
-							,leaves iceberg lettuce, tablespoons Hellmann's mayonnaise, cheese.</p>
-						<!--<small>Donec id elit non mi porta.</small>-->
-					  </a>
-					  <br>
-					  <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span> 
-						<span class="badge badge-animal">Animal Products</span> <span class="badge badge-lactose">Lactose</span>Allergens </li>
-					 </ul>
-				  
-				</div>
-				<div class="col-md-6 text-center">
-					<ul class="list-group">
-
-						<div class="panel-body text-bold">
-							<img src="{{url_for('static', filename='img/well_logo.png')}}" alt="..." class="img-thumbnail">
-					  </div>
-						
-						  <br>
-						  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-							<div class="d-flex w-100 justify-content-between bg-light">
-							  <h4 class="mb-1">Price</h4>
-							  <!--<small>3 days ago</small>-->
-							</div>
-							<p class="mb-1">
-
-								$11.99</p>
-							<!--<small>Donec id elit non mi porta.</small>-->
-						  </a>
-						  <br>
-						  <br>	
-						  <input type="number" class="form-control" id="input1" placeholder="Enter quantity">
-					  </ul>
-				  <!--right column-->
-				</div>
-			  </div>
-			
-		</div>
-		<div class="modal-footer">
+            </div>
+            <div class="modal-footer">
 
 
+                <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal"
+                        class="btn btn-primary">Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
-		  <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal" class="btn btn-primary">Add to cart</button>
-		</div>
-	  </div>
-	</div>
-  </div>
+<!--Well modal-->
+<div class="modal fade " id="BltModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Blt Sandwich</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!--left column-->
+                        <div class="panel-body text-bold">
+                            <img src="{{ url_for('static', filename='img/well_blt.jpeg') }}" alt="..."
+                                 class="img-thumbnail">
+                        </div>
+                        <br>
+                        <ul class="list-group">
 
-  <!--alert modal-->
-  <div class="modal fade" id="myModal" role="dialog">
+                            <a href="#"
+                               class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1">Ingredients</h4>
+                                    <!--<small>3 days ago</small>-->
+                                </div>
+                                <p class="mb-1">
+                                    Bacon
+                                    ,slices white bread
+                                    ,leaves iceberg lettuce, tablespoons Hellmann's mayonnaise, cheese.</p>
+                                <!--<small>Donec id elit non mi porta.</small>-->
+                            </a>
+                            <br>
+                            <li class="list-group-item text-bold"><span class="badge badge-gluten">Gluten</span>
+                                <span class="badge badge-animal">Animal Products</span> <span
+                                        class="badge badge-lactose">Lactose</span>Allergens
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <ul class="list-group">
+
+                            <div class="panel-body text-bold">
+                                <img src="{{ url_for('static', filename='img/well_logo.png') }}" alt="..."
+                                     class="img-thumbnail">
+                            </div>
+
+                            <br>
+                            <a href="#"
+                               class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between bg-light">
+                                    <h4 class="mb-1">Price</h4>
+                                    <!--<small>3 days ago</small>-->
+                                </div>
+                                <p class="mb-1">
+
+                                    $11.99</p>
+                                <!--<small>Donec id elit non mi porta.</small>-->
+                            </a>
+                            <br>
+                            <br>
+                            <input type="number" class="form-control" id="input1" placeholder="Enter quantity">
+                        </ul>
+                        <!--right column-->
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button data-toggle="modal" data-target="#myModal" type="button" data-dismiss="modal"
+                        class="btn btn-primary">Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--alert modal-->
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
         <div class="alert alert-success alert-dismissible">
-            <a  class="close" data-dismiss="modal" aria-label="close">&times;</a>
+            <a class="close" data-dismiss="modal" aria-label="close">&times;</a>
             <strong>Success!</strong> Added to cart.
-          </div>
+        </div>
     </div>
-  </div>
+</div>
 
-		<!-- jQuery -->
-		<script src="{{url_for('static', filename='/bs/js/jquery.min.js')}}"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="{{url_for('static', filename='/bs/js/bootstrap.min.js')}}"></script>
-	</body>
+<!-- jQuery -->
+<script src="{{ url_for('static', filename='/bs/js/jquery.min.js') }}"></script>
+<!-- Bootstrap JavaScript -->
+<script src="{{ url_for('static', filename='/bs/js/bootstrap.min.js') }}"></script>
+</body>
 </html>
