@@ -5,7 +5,7 @@
 
 ### Added "On the budget?" and "Protein" pages on Customer side of the website - Andela
 
--"On the budget?" page - Spoonacular API 
+-"On the budget?" page - **Spoonacular API**
  -To use Spoonacular API, we need to install it:
    ```
    pip install spoonacular
@@ -14,11 +14,19 @@
    ```
   import spoonacular as sp
    ```
-- this page allows the customer to generate a random recipe on the click of "Get another recipe" button. The page will list the title of the recipe, number of servings, preparation time, ingridents and instructions for preparations alongside the image of the dish.
+  - This page allows the customer to generate a random recipe on the click of "Get another recipe" button. The page will list the title of the recipe, number of servings, preparation time, ingridents and instructions for preparations alongside the image of the dish.
  
   ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/onthebudget.png?raw=true)
   
-- A key component of a diet of a student who is aiming for amazing performance in school is protein intake. Amino acids in protein are precursors to creating dopamine in the brain, which boosts our motivation. Unfortunately, many students don't know which foods have enough protein in them, so their performance drops. To make this easier for customers, I created a "Protein" page on the Skip the line website that uses USDA FoodData Central API to search through all of the products on the North American market by their input and tell them the amount of protein in each. This can be very useful when preparing a grocery shopping list!
+-"Protein" page - **USDA FoodData Central API**
+ - To use this API we need a couple of supporting libraries to be imported at the start of the file:
+   ```
+   import requests
+   import json
+   ```
+  - We also need to have our unique API key from https://fdc.nal.usda.gov/api-guide.html
+  - This page highlights the importance of protein intake in one's diet and allows the customer to get information about protein content of any item they type into the search bar. Text typed into searchbar is then passed to USDA FoodData Central API, and a list of names of foods in that category is displayed alongside the protein content in grams. When typing into search bar again, customer can get data about protein content of another item.
+ 
 ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/protein.png?raw=true)
  
 
