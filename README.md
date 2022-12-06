@@ -3,9 +3,18 @@
 ## Updated features in Individual Project 📝
 
 
-### Added Spoonacular API and USDA FoodData Central API  - Andela
+### Added "On the budget?" and "Protein" pages on Customer side of the website - Andela
 
-- to implement the "On the budget?" page on the customer side of the application I used Spoonacular API. This API allows us to access over 100000 recipes from all over the internet. In my project, we use this API to help students who suffer from food insecurity to prepare meals at home at a much cheaper price, by giving them a nearly infinite amount of recipes they can choose from with one click of the button!
+-"On the budget?" page - Spoonacular API 
+ -To use Spoonacular API, we need to install it:
+   ```
+   pip install spoonacular
+   ```
+  - After that, we need to import it in the code and get our unique API KEY from https://spoonacular.com/food-api
+   ```
+  import spoonacular as sp
+   ```
+- this page allows the customer to generate a random recipe on the click of "Get another recipe" button. The page will list the title of the recipe, number of servings, preparation time, ingridents and instructions for preparations alongside the image of the dish.
  
   ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/onthebudget.png?raw=true)
   
