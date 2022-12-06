@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+<body>
+
+	<div class="container-fluid" id="wrapper">
+			
+		<div class="row" id="homeJumbo">
+			<div class="overlay"></div>
+			<div class="col-lg-12">
+				<h1>
+					<a href="{{url_for('main.index')}}">Skip the line</a>
+				</h1>
+				
+				<div class="row t20">
+					<div class="col-lg-4 col-lg-offset-4">
+						<ul class="nav nav-pills nav-justified" >
+						  <li role="presentation" >
+							  <a href="{{url_for('main.index')}}" title="Home">Home</a>
+						  </li>
+		
+						
+						  <li role="presentation"  >
+							<a href="{{url_for('main.cart')}}" title="Add Food Item"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+						</li>
+                        <li role="presentation"  >
+							<a href="{{url_for('main.budget')}}" title="On the budget?">On the budget?</a>
+						</li><li role="presentation" class="active" >
+							<a href="{{url_for('main.protein')}}" title="Protein">Protein</a>
+						</li>
+						<li role="presentation" >
+							<a href="{{url_for('main.login')}}" title="Log out">Log out</a>
+						</li>
+						</ul>
+				
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
+	
+			
+        <div class="row t20">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        <h3 class="lean-h text-black">
+                            <i class="glyphicon glyphicon-cutlery"></i> Find the amount of protein in food!
+                        </h3>
+                        
+                        <hr />
+
+                            
+                            
+                        <form class="form-group" action="/protein" method="post">
+							<div class="row t20">
+								<div class="col-lg-4 col-lg-offset-4">
+									<div class="panel panel-default">
+										<div class="panel-body text-center">
+											<h3 class="lean-h text-black">
+												 Search for food
+											</h3>
+											<hr />
+				
+												
+												
+												<div class="row">
+													
+				
+												
+													
+				
+												   <div class="col-lg-12">
+													
+														<br>
+														  <input type="text" class="form-control" id="food-name" name="searchfood" placeholder="Searh for food" autofocus>
+													
+													</div>
+													
+											   
+												   <div class="col-lg-12">
+													
+				
+														<label style="visibility:hidden">submit</label>
+														<a href="{{url_for('main.protein')}}">
+														<button type="submit" class="btn btn-primary btn-block">
+															<h4 class="lean-h">Search</h4>
+														</button></a>
+													</div>
+											   </div>     
+										
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							</form>
+							{% for i in listitems %}
+								<pre> {{i}}</pre>
+							{% endfor %}
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+			<!-- jQuery -->
+		<script src="{{url_for('static', filename='/bs/js/jquery.min.js')}}"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="{{url_for('static', filename='/bs/js/bootstrap.min.js')}}"></script>
+
+</body>
+</html>

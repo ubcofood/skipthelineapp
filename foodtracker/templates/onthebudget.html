@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{url_for('static', filename='bs/css/united.min.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+<body>
+
+	<div class="container-fluid" id="wrapper">
+			
+		<div class="row" id="homeJumbo">
+			<div class="overlay"></div>
+			<div class="col-lg-12">
+				<h1>
+					<a href="{{url_for('main.index')}}">Skip the line</a>
+				</h1>
+				
+				<div class="row t20">
+					<div class="col-lg-4 col-lg-offset-4">
+						<ul class="nav nav-pills nav-justified" >
+						  <li role="presentation" >
+							  <a href="{{url_for('main.index')}}" title="Home">Home</a>
+						  </li>
+		
+						
+						  <li role="presentation"  >
+							<a href="{{url_for('main.cart')}}" title="Add Food Item"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+						</li>
+                        <li role="presentation" class="active" >
+							<a href="{{url_for('main.budget')}}" title="On the budget?">On the budget?</a>
+						</li>
+                    </li><li role="presentation"  >
+                        <a href="{{url_for('main.protein')}}" title="Protein">Protein</a>
+                    </li>
+						<li role="presentation" >
+							<a href="{{url_for('main.login')}}" title="Log out">Log out</a>
+						</li>
+						</ul>
+				
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
+			
+        <div class="row t20">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        <h3 class="lean-h text-black">
+                            <i class="glyphicon glyphicon-piggy-bank"></i> On the budget?
+                        </h3>
+                        <h5 class="lean-h text-black">
+                             Here is a recipe you can make at home!
+                        </h5>
+                        <hr />
+
+                            
+                            
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h3 class="mb-1">{{title}}</h3>
+                               
+                              </div>
+                              <p class="mb-1">{{servings}}</p>
+                              <p class="mb-1">{{preptime}}</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                              <div class="d-flex w-100 justify-content-between">
+                                 <img src={{link}} alt="Recipe image" >
+                              </div>
+                             
+                              <p class="mb-1"></p>
+                              <pre class="mb-1">{{ingredients}}</pre>  
+                              <pre class="mb-1">{{instructions}}</pre> 
+                             
+                                  
+                                <label style="visibility:hidden">submit</label>
+                               
+                                <a href="{{url_for('main.budget')}}">
+                                  <button type="submit" class="btn btn-primary btn-block">
+                                 <h4 class="lean-h">Get another recipe</h4>
+                                </button>
+                             </a>
+                       
+                            </a>
+                          </div>   
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+			<!-- jQuery -->
+		<script src="{{url_for('static', filename='/bs/js/jquery.min.js')}}"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="{{url_for('static', filename='/bs/js/bootstrap.min.js')}}"></script>
+
+</body>
+</html>
