@@ -6,7 +6,12 @@
 ### Added Spoonacular API and USDA FoodData Central API  - Andela
 
 - to implement the "On the budget?" page on the customer side of the application I used Spoonacular API. This API allows us to access over 100000 recipes from all over the internet. In my project, we use this API to help students who suffer from food insecurity to prepare meals at home at a much cheaper price, by giving them a nearly infinite amount of recipes they can choose from with one click of the button!
+ 
   ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/onthebudget.png?raw=true)
+  
+- A key component of a diet of a student who is aiming for amazing performance in school is protein intake. Amino acids in protein are precursors to creating dopamine in the brain, which boosts our motivation. Unfortunately, many students don't know which foods have enough protein in them, so their performance drops. To make this easier for customers, I created a "Protein" page on the Skip the line website that uses USDA FoodData Central API to search through all of the products on the North American market by their input and tell them the amount of protein in each. This can be very useful when preparing a grocery shopping list!
+![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/protein.png?raw=true)
+ 
 
 ### Paypal Integration and Admin Troubleshoot Page - Nick
 
