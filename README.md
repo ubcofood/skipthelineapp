@@ -25,7 +25,7 @@
 
 ### Text and phone call confirmations of the Order - Anirudh
 
-- Added text message verification on chechout using the Twilio SMS API
+- Added text message verification on chechout using the Vonage SMS API
   - Customers will recieve a text messagestating their order number and verifiying that it has been confirmed.
   - On pressing the checkout button, the customer will shortly recieve a text message confirming their order.
 
@@ -37,7 +37,7 @@
 
    #### API used:
 
-   - Twilio SMS API
+   - Vonage SMS API
    - Twilio Voice API
 
 ## Updated features in Assignment 3 📝
