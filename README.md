@@ -29,7 +29,7 @@
   - Customers will recieve a text messagestating their order number and verifiying that it has been confirmed.
   - On pressing the checkout button, the customer will shortly recieve a text message confirming their order.
 
- <img width="180" alt="Screenshot 2022-12-04 at 1 09 43 AM" src="https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/IMG-3136.PNG">
+ <img width="180" alt="Screenshot 2022-12-04 at 1 09 43 AM" src="https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/63728.jpg">
 
 - Added Phone call verification on chechout using the Twilio Voice API
   - Customers will recieve a phone call stating their order number and verifiying that it has been confirmed.
