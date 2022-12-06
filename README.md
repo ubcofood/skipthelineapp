@@ -35,6 +35,11 @@
   - Customers will recieve a phone call stating their order number and verifiying that it has been confirmed.
   - On pressing the checkout button, the customer will shortly recieve a phone call confirming their order.
 
+   #### API used:
+
+   - Twilio SMS API
+   - Twilio Voice API
+
 ## Updated features in Assignment 3 📝
 
 - Export menu pdf in Vendor Menu page with **pdfkit library** integration
