@@ -6,7 +6,7 @@
 ### Added Spoonacular API and USDA FoodData Central API  - Andela
 
 - to implement the "On the budget?" page on the customer side of the application I used Spoonacular API. This API allows us to access over 100000 recipes from all over the internet. In my project, we use this API to help students who suffer from food insecurity to prepare meals at home at a much cheaper price, by giving them a nearly infinite amount of recipes they can choose from with one click of the button!
- <img width="306" alt="Screenshot 2022-12-04 at 1 09 43 AM" src="https://user-images.githubusercontent.com/88886207/onthebudget.png">
+  ![alt text](https://github.com/ubcofood/skipthelineapp/blob/main/sampleoutputs/onthebudget.png?raw=true)
 
 ### Paypal Integration and Admin Troubleshoot Page - Nick
 
