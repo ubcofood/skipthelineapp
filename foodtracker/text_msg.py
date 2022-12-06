@@ -1,10 +1,17 @@
-from twilio.rest import Client
+import vonage
 
-sid="AC71ec9f437f59e5d5a3091916a0b61491"
-auth_token ="01add7300b37eb3851041c9b99a6addc"
+client = vonage.Client(key="9c078ac5", secret="yG3X7zVc8Zgr8ra7")
+sms = vonage.Sms(client)
 
-client = Client(sid, auth_token)
+responseData = sms.send_message(
+    {
+        "from": "12266200405",
+        "to": "12508637975",
+        "text": "Your Order#1001 has been confirmed!",
+    }
+)
 
-resp = client.messages.create(body="Hello my friend!", from_="+13853965618", to="+12508637975")
-
-print(resp.sid)
+if responseData["messages"][0]["status"] == "0":
+    print("Message sent successfully.")
+else:
+    print(f"Message failed with error: {responseData['messages'][0]['error-text']}")
